@@ -87,7 +87,7 @@ def train_model(model, device, train_dataset_path, K, num_epochs, inner_loss_fn,
     general_dataloader = DataLoader(train_dataset_tensors, batch_size=general_batch_size, shuffle=True)
 
     shared_params = model.shared_block.parameters()
-    unique_params = list(model.unique_block.parameters()) + list(model.output_layer.parameters())
+    original_unique_params = list(model.unique_block.parameters()) + list(model.output_layer.parameters())
     ###original_unique_params = [param.clone().detach() for param in unique_params]
     
     
@@ -112,7 +112,7 @@ def train_model(model, device, train_dataset_path, K, num_epochs, inner_loss_fn,
                 coords, targets = coords.to(device), targets.to(device)
 
                 # Create a copy of the unique parameters for the inner loop #
-                original_unique_params = [param.clone().detach().to(device).requires_grad_(True) for param in unique_params] #
+                unique_params = [param.clone().detach().to(device).requires_grad_(True) for param in original_unique_params] #
 
                 # Inner loop
                 for k in range(K):
@@ -120,7 +120,7 @@ def train_model(model, device, train_dataset_path, K, num_epochs, inner_loss_fn,
                     num_mini_batches = 0
 
                     # Create a temporary optimizer for the inner loop (2nd order MAML) #
-                    inner_optimizer = optim.NAdam(original_unique_params, lr=inner_learning_rate) #
+                    inner_optimizer = optim.NAdam(unique_params, lr=inner_learning_rate) #
 
                     for batch_coords, batch_targets in batch_data(coords, targets, mini_batch_size):
                         # Forward pass (batched)
