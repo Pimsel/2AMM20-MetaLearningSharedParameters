@@ -60,6 +60,17 @@ def prepare_image_for_siren(image_tensor):
     return coords, pixel_values, H, W
 
 
+def get_N_shared_layers(model, N):
+    shared_layers = []
+    unique_layers = []
+    for i, (name, param) in enumerate(model.named_parameters()):
+        if i < N:
+            shared_layers.append(param)
+        else:
+            unique_layers.append(param)
+    return shared_layers, unique_layers
+
+
 def check_patience(best_loss, loss, wait, patience):
     '''
     
@@ -78,7 +89,7 @@ def check_patience(best_loss, loss, wait, patience):
 
 
 # Training loop
-def train_model(model, device, train_dataset_path, K, num_epochs, inner_loss_fn, outer_loss_fn, inner_learning_rate, meta_learning_rate, general_batch_size, mini_batch_size, patience):
+def train_model(model, device, train_dataset_path, K, num_epochs, inner_loss_fn, outer_loss_fn, inner_learning_rate, meta_learning_rate, general_batch_size, mini_batch_size, patience, pretrained=False, shared_params=None, original_unique_params=None):
     '''
     
     '''
@@ -86,13 +97,12 @@ def train_model(model, device, train_dataset_path, K, num_epochs, inner_loss_fn,
     train_dataset_tensors = Data(train_dataset_path, transform=ToTensor())
     general_dataloader = DataLoader(train_dataset_tensors, batch_size=general_batch_size, shuffle=True)
 
-    shared_params = model.shared_block.parameters()
-    original_unique_params = list(model.unique_block.parameters()) + list(model.output_layer.parameters())
-    ###original_unique_params = [param.clone().detach() for param in unique_params]
+    if pretrained is False:
+        shared_params = model.shared_block.parameters()
+        original_unique_params = list(model.unique_block.parameters()) + list(model.output_layer.parameters())
     
     
     meta_optimizer = optim.AdamW(shared_params, lr=meta_learning_rate)
-    ###inner_optimizer = optim.NAdam(unique_params, lr=inner_learning_rate)
     
     best_loss = 1.0
     wait = 0
@@ -103,24 +113,22 @@ def train_model(model, device, train_dataset_path, K, num_epochs, inner_loss_fn,
 
             for i2, image in enumerate(image_batch):
                 # Reset the unique parameters to their original values at the start of each inner loop
-                ###for param, original_param in zip(unique_params, original_unique_params):
-                ###    param.data.copy_(original_param.data)
-                for param in unique_params: #
-                    param.requires_grad = True #
+                for param in unique_params:
+                    param.requires_grad = True
                 
                 coords, targets, height, width = prepare_image_for_siren(image)
                 coords, targets = coords.to(device), targets.to(device)
 
-                # Create a copy of the unique parameters for the inner loop #
-                unique_params = [param.clone().detach().to(device).requires_grad_(True) for param in original_unique_params] #
+                # Create a copy of the unique parameters for the inner loop
+                unique_params = [param.clone().detach().to(device).requires_grad_(True) for param in original_unique_params]
 
                 # Inner loop
                 for k in range(K):
                     total_inner_loss = 0
                     num_mini_batches = 0
 
-                    # Create a temporary optimizer for the inner loop (2nd order MAML) #
-                    inner_optimizer = optim.NAdam(unique_params, lr=inner_learning_rate) #
+                    # Create a temporary optimizer for the inner loop (2nd order MAML)
+                    inner_optimizer = optim.NAdam(unique_params, lr=inner_learning_rate)
 
                     for batch_coords, batch_targets in batch_data(coords, targets, mini_batch_size):
                         # Forward pass (batched)
@@ -141,7 +149,8 @@ def train_model(model, device, train_dataset_path, K, num_epochs, inner_loss_fn,
                     
                     # Log average inner loss
                     wandb.log({f'inner loop avg loss epoch {epoch+1}': avg_inner_loss.item()})
-                    print(f'\rFinished inner loop iteration {str(k).ljust(2)} for image {str(i2+1).ljust(4)}/{len(image_batch)} of batch {str(i1+1).ljust(2)}/{len(general_dataloader)}. Epoch {str(epoch+1).ljust(4)}/{num_epochs}', end='  ', flush=True)
+                
+                print(f'\rProcessed image {str(i2+1).ljust(4)}/{len(image_batch)} of batch {str(i1+1).ljust(2)}/{len(general_dataloader)}. Epoch {str(epoch+1).ljust(4)}/{num_epochs}', end='  ', flush=True)
             
                 # Meta-update
                 output = model(coords)
