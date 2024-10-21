@@ -1,20 +1,19 @@
 import torch
-from torch.utils.data import DataLoader
-from torchvision import datasets
-
+import wandb
 from model import SIREN
 import loss_functions
 from train_functions import train_model, get_N_shared_layers
-import wandb
 
 
 # Set SIREN initialization parameters
+# Relevant if no pretrained model is loaded
 shared_size = (256, 5)
-unique_size = (128, 1)  # plus 2 for transition layer and output layer
+unique_size = (128, 1)  # model will already include 2 unique layers by default
 in_features = 2  # 2 input values for the coordinate pair (x,y)
 out_features = 3  # 3 output values for the RGB value
 omega_0 = 30  # 30 is the default as recommended by the SIREN paper
-pretrained_model_path = r'path_to_model.pth'
+
+pretrained_model_path = r'path_to_model.pth'  # Define if pretrained model is to be used
 
 pretrained = False  # Set according to model used
 if pretrained:
@@ -27,8 +26,9 @@ else:
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = model.to(device)
 dataset_path = r'C:\Users\pimde\Documents\2AMM20\CelebA_small'
+train_fraction = 0.8  # Fraction of data to be used for training
 inner_loss_fn = loss_functions.MSE_loss()
-outer_loss_fn = loss_functions.SSIM_loss()
+outer_loss_fn = loss_functions.MSE_loss()
 
 # Define hyperparameters
 K = 10  # nr of inner loop iterations
@@ -36,7 +36,7 @@ num_epochs = 4000  # nr of allowed meta-updates
 inner_learning_rate = 1e-4
 meta_learning_rate = 1e-3
 general_batch_size = 15
-mini_batch_size = 2048  # batch size of coordinate-value pairs to be processed per each of K iterations (image dimensions: 178x218)
+mini_batch_size = 4096  # batch size of coordinate-value pairs to be processed per each of K iterations (image dimensions: 178x218)
 patience = 10
 
 
@@ -51,7 +51,7 @@ wandb.init(project='MetaLearnDataset-testrun4', config={
     'mini_batch_size': mini_batch_size,
     'omega_0': omega_0,
     'Inner loss function': 'MSE',
-    'Outer loss function': 'SSIM'
+    'Outer loss function': 'MSE'
 })
 
 torch.cuda.empty_cache()
@@ -68,4 +68,4 @@ if pretrained:
     train_model(model, device, dataset_path, K, num_epochs, inner_loss_fn, outer_loss_fn, inner_learning_rate, meta_learning_rate, general_batch_size, mini_batch_size, patience, pretrained, shared_params, original_unique_params)
 
 else:
-    train_model(model, device, dataset_path, K, num_epochs, inner_loss_fn, outer_loss_fn, inner_learning_rate, meta_learning_rate, general_batch_size, mini_batch_size, patience)
+    train_model(model, device, dataset_path, train_fraction, K, num_epochs, inner_loss_fn, outer_loss_fn, inner_learning_rate, meta_learning_rate, general_batch_size, mini_batch_size, patience)
