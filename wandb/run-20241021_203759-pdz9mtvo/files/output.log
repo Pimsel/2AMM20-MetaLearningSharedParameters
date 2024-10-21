@@ -1,0 +1,18 @@
+C:\Users\pimde\anaconda3\envs\2AMM20\Lib\site-packages\torch\functional.py:513: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at C:\cb\pytorch_1000000000000\work\aten\src\ATen\native\TensorShape.cpp:3610.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Traceback (most recent call last):
+  File "C:\Users\pimde\OneDrive\Documents\GitHub\2AMM20-MetaLearningSharedParameters\train_script.py", line 70, in <module>
+    train_model(model, device, dataset_path, train_fraction, K, num_epochs, inner_loss_fn, outer_loss_fn, inner_learning_rate, meta_learning_rate, general_batch_size, patience)
+  File "C:\Users\pimde\OneDrive\Documents\GitHub\2AMM20-MetaLearningSharedParameters\train_functions.py", line 257, in train_model
+    output = model(batch_coords, unique_params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pimde\anaconda3\envs\2AMM20\Lib\site-packages\torch\nn\modules\module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pimde\anaconda3\envs\2AMM20\Lib\site-packages\torch\nn\modules\module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pimde\OneDrive\Documents\GitHub\2AMM20-MetaLearningSharedParameters\model.py", line 71, in forward
+    weight = unique_params[start_idx:end_idx].view_as(layer.linear.weight)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'view_as'

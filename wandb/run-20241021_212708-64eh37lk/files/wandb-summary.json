@@ -1,0 +1,1 @@
+{"Inner loop loss": 0.08887119591236115, "_timestamp": 1729543738.8905063, "_runtime": 4910.390118360519, "_step": 56909, "Outer loop batch loss": 0.0887359157204628, "Outer loop average loss": 0.07381205260753632, "_wandb": {"runtime": 4909}}

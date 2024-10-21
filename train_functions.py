@@ -26,13 +26,6 @@ class Data(Dataset):
         return image
 
 
-# Function to split data into mini-batches for inner loop
-def batch_data(coords, targets, batch_size):
-    num_samples = coords.shape[0]
-    for i in range(0, num_samples, batch_size):
-        yield coords[i:i + batch_size], targets[i:i + batch_size]
-
-
 def prepare_image_for_siren(image_tensor):
     '''
     Prepares an image tensor for input into a SIREN model by generating coordinates and target pixel values.
@@ -149,8 +142,8 @@ def check_patience(best_loss, loss, wait, patience):
 
 
 # Training loop
-def train_model(model, device, dataset_path, train_fraction, K, num_epochs, inner_loss_fn, outer_loss_fn, 
-                inner_learning_rate, meta_learning_rate, general_batch_size, patience, 
+def train_model(model, device, dataset_path, K, num_epochs, inner_loss_fn, outer_loss_fn, 
+                inner_learning_rate, meta_learning_rate, batch_size, patience, 
                 pretrained=False, shared_params=None, original_unique_params=None):
     '''
     Trains a neural network model with meta-learning by iteratively updating a shared set of parameters 
@@ -166,10 +159,6 @@ def train_model(model, device, dataset_path, train_fraction, K, num_epochs, inne
 
     dataset_path : str
         The file path to the directory containing the images for training and validation.
-
-    train_fraction : float
-        Floating point value from [0.0, 1.0] representing the fraction of the dataset to be used for training, 
-        while the remaining fraction is used for validation.
 
     K : int
         The number of inner-loop optimization steps performed for updating the task-specific parameters 
@@ -191,7 +180,7 @@ def train_model(model, device, dataset_path, train_fraction, K, num_epochs, inne
     meta_learning_rate : float
         The learning rate used by the meta-optimizer to update the shared parameters in the outer loop during meta-updates.
 
-    general_batch_size : int
+    batch_size : int
         The number of images in each batch of data that is fed into the model for training in each epoch.
 
     patience : int
@@ -214,14 +203,8 @@ def train_model(model, device, dataset_path, train_fraction, K, num_epochs, inne
     '''
 
     # Prepare data
-    full_dataset = Data(dataset_path, transform=ToTensor())
-
-    # Split dataset into training and validatino dataloaders
-    train_size = int(train_fraction * len(full_dataset))
-    val_size = len(full_dataset) - train_size
-    train_dataset, val_dataset = random_split(full_dataset, [train_size, val_size])
-    train_dataloader = DataLoader(train_dataset, batch_size=general_batch_size, shuffle=True)
-    val_dataloader = DataLoader(val_dataset, batch_size=general_batch_size, shuffle=False)
+    train_dataset = Data(dataset_path, transform=ToTensor())
+    train_dataloader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
 
     # Define shared and unique parameters if new model is used
     if not pretrained:
@@ -229,20 +212,15 @@ def train_model(model, device, dataset_path, train_fraction, K, num_epochs, inne
         original_unique_params = list(model.unique_block.parameters()) + list(model.output_layer.parameters())
     
     # Initialize outer loop optimizer
-    meta_optimizer = optim.AdamW(shared_params, lr=meta_learning_rate)
+    meta_optimizer = optim.Adam(shared_params, lr=meta_learning_rate)
     
     # Initialize patience variables
     best_loss = 1.0
     wait = 0
 
-
     for epoch in range(num_epochs):
-        model.train()
         total_outer_loss = 0
-
         for i1, image_batch in enumerate(train_dataloader):
-            #image_batch = image_batch.to(device)
-
             batch_coords, batch_targets = [], []
             for image in image_batch:
                 coords, targets = prepare_image_for_siren(image)
@@ -253,12 +231,12 @@ def train_model(model, device, dataset_path, train_fraction, K, num_epochs, inne
             batch_targets = torch.stack(batch_targets).to(device)
 
             # Create a copy of the unique parameters for the inner loop
-            unique_params = [param.clone().detach().to(device).requires_grad_(True) for param in original_unique_params]
+            unique_params = [param.to(device).requires_grad_(True) for param in original_unique_params]
 
             # Inner loop
             for k in range(K):
                 # Create a temporary optimizer for the inner loop (2nd order MAML)
-                inner_optimizer = optim.NAdam(unique_params, lr=inner_learning_rate)
+                inner_optimizer = optim.Adam(unique_params, lr=inner_learning_rate)
 
                 output = model(batch_coords)
                 inner_loss = inner_loss_fn(output, batch_targets)
@@ -268,8 +246,8 @@ def train_model(model, device, dataset_path, train_fraction, K, num_epochs, inne
                 inner_loss.backward(retain_graph=True)  # Retain graph for meta-update
                 inner_optimizer.step()
                     
-                # Log average inner loss
-                wandb.log({f'Inner loop loss epoch {epoch+1}': inner_loss.item()})
+                # Log inner loss
+                wandb.log({f'Inner loop loss': inner_loss.item()})
                 
                 print(f'\rProcessed batch {str(i1+1).ljust(2)}/{len(train_dataloader)}. Epoch {str(epoch+1).ljust(4)}/{num_epochs}', end='  ', flush=True)
             
@@ -277,42 +255,18 @@ def train_model(model, device, dataset_path, train_fraction, K, num_epochs, inne
             output = model(batch_coords)
             outer_loss = outer_loss_fn(output, batch_targets)
             total_outer_loss += outer_loss
+            
+            meta_optimizer.zero_grad()
+            outer_loss.backward()
+            meta_optimizer.step()
+
+            wandb.log({f'Outer loop batch loss': outer_loss.item()})
 
         avg_outer_loss = total_outer_loss / len(train_dataloader)
-
-        # Meta-update (update shared block parameters) based on the average outer loss
-        meta_optimizer.zero_grad()
-        avg_outer_loss.backward()
-        meta_optimizer.step()
-            
-        # Log the outer loss
-        wandb.log({f'Outer loop training-loss epoch {epoch+1}': avg_outer_loss.item()})
-
-
-        # Validation loop
-        model.eval()
-        total_val_loss = 0
-        with torch.no_grad():
-            for i1, val_image_batch in enumerate(val_dataloader):
-                val_batch_coords, val_batch_targets = [], []
-                for val_image in val_image_batch:
-                    val_coords, val_targets = prepare_image_for_siren(val_image)
-                    val_batch_coords.append(val_coords)
-                    val_batch_targets.append(val_targets)
-                
-                val_batch_coords = torch.stack(val_batch_coords).to(device)
-                val_batch_targets = torch.stack(val_batch_targets).to(device)
-
-                val_output = model(val_batch_coords)
-                val_loss = outer_loss_fn(val_output, val_batch_targets)
-                total_val_loss += val_loss
-
-        avg_val_loss = total_val_loss / len(val_dataloader)
-        wandb.log({f'Outer loop validation-loss epoch {epoch+1}': avg_val_loss.item()})
-
+        wandb.log({f'Outer loop average loss': avg_outer_loss.item()})
 
         # Check patience
-        best_loss, wait, stop_training = check_patience(best_loss, avg_val_loss.item(), wait, patience)
+        best_loss, wait, stop_training = check_patience(best_loss, avg_outer_loss.item(), wait, patience)
         if stop_training:
             print(f'Training stopped early at epoch {epoch+1}.')
             break

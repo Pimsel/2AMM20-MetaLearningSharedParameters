@@ -59,7 +59,7 @@ class SIREN(nn.Module):
         # Final output layer (linear transformation, no sine activation)
         self.output_layer = nn.Linear(unique_size[0], out_features)
 
-    def forward(self, x):
+    def forward(self, x, unique_params=None):
         # Pass through the shared block
         x = self.shared_block(x)
         # Pass through the unique block

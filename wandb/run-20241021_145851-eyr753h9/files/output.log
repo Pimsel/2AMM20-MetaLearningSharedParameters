@@ -1,0 +1,43 @@
+C:\Users\pimde\anaconda3\envs\2AMM20\Lib\site-packages\torch\functional.py:513: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at C:\cb\pytorch_1000000000000\work\aten\src\ATen\native\TensorShape.cpp:3610.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+
+
+
+
+
+
+Processed batch 9 /160. Epoch 1   /4000
+Traceback (most recent call last):
+  File "C:\Users\pimde\OneDrive\Documents\GitHub\2AMM20-MetaLearningSharedParameters\train_script.py", line 70, in <module>
+    train_model(model, device, dataset_path, train_fraction, K, num_epochs, inner_loss_fn, outer_loss_fn, inner_learning_rate, meta_learning_rate, general_batch_size, patience)
+  File "C:\Users\pimde\OneDrive\Documents\GitHub\2AMM20-MetaLearningSharedParameters\train_functions.py", line 256, in train_model
+    output = model(batch_coords)
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pimde\anaconda3\envs\2AMM20\Lib\site-packages\torch\nn\modules\module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pimde\anaconda3\envs\2AMM20\Lib\site-packages\torch\nn\modules\module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pimde\OneDrive\Documents\GitHub\2AMM20-MetaLearningSharedParameters\model.py", line 64, in forward
+    x = self.shared_block(x)
+        ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pimde\anaconda3\envs\2AMM20\Lib\site-packages\torch\nn\modules\module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pimde\anaconda3\envs\2AMM20\Lib\site-packages\torch\nn\modules\module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pimde\anaconda3\envs\2AMM20\Lib\site-packages\torch\nn\modules\container.py", line 219, in forward
+    input = module(input)
+            ^^^^^^^^^^^^^
+  File "C:\Users\pimde\anaconda3\envs\2AMM20\Lib\site-packages\torch\nn\modules\module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pimde\anaconda3\envs\2AMM20\Lib\site-packages\torch\nn\modules\module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pimde\OneDrive\Documents\GitHub\2AMM20-MetaLearningSharedParameters\model.py", line 31, in forward
+    return torch.sin(self.omega_0 * x)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 190.00 MiB. GPU 0 has a total capacity of 10.00 GiB of which 0 bytes is free. Of the allocated memory 24.18 GiB is allocated by PyTorch, and 79.56 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
