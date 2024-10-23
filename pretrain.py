@@ -1,4 +1,4 @@
-import argparse
+import argparse, os
 from types import SimpleNamespace
 import torch
 import torch.optim as optim
@@ -11,11 +11,11 @@ from train_functions import Data, prepare_image_for_siren, check_patience
 
 
 def pretrain(config):
-    with wandb.init(project='SPO_pretrainer_test1', config=config):
+    with wandb.init(project='SPO_pretrainer_Snellius', config=config):
         config = wandb.config
         
         # General initializations
-        dataset_path = r'C:\Users\pimde\Documents\2AMM20\CelebA_small'
+        dataset_path = os.path.expanduser('~/traindata/img_align_celeba')
         train_dataset = Data(dataset_path, transform=ToTensor())
         train_dataloader = DataLoader(train_dataset, batch_size=config.batch_size, shuffle=True)
         
@@ -75,8 +75,8 @@ def pretrain(config):
 
 # Initialize default hyperparameters and parser functionality
 default_config = SimpleNamespace(
-    epochs=10000,
-    patience=50,
+    epochs=100000,
+    patience=100,
     learning_rate=1e-4,
     batch_size=5,
     shared_width=256,

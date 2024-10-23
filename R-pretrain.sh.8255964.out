@@ -1,0 +1,225 @@
+wandb: Appending key for api.wandb.ai to your netrc file: /home/scur1981/.netrc
+wandb: Starting wandb agent 🕵️
+2024-10-23 23:45:06,330 - wandb.wandb_agent - INFO - Running runs: []
+2024-10-23 23:45:06,667 - wandb.wandb_agent - INFO - Agent received command: run
+2024-10-23 23:45:06,667 - wandb.wandb_agent - INFO - Agent starting run with config:
+	batch_size: 75
+	learning_rate: 3.1865516887557035e-05
+	omega_0: 51
+	shared_depth: 12
+	shared_width: 256
+	unique_depth: 2
+	unique_width: 128
+2024-10-23 23:45:06,670 - wandb.wandb_agent - INFO - About to run command: /usr/bin/env python pretrain.py --batch_size=75 --learning_rate=3.1865516887557035e-05 --omega_0=51 --shared_depth=12 --shared_width=256 --unique_depth=2 --unique_width=128
+2024-10-23 23:45:11,682 - wandb.wandb_agent - INFO - Running runs: ['shbcny7b']
+wandb: Currently logged in as: pimdewildt11 (pimdewildt11-eindhoven-university-of-technology). Use `wandb login --relogin` to force relogin
+wandb: WARNING Ignored wandb.init() arg project when running a sweep.
+wandb: Tracking run with wandb version 0.18.5
+wandb: Run data is saved locally in /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241023_234515-shbcny7b
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run stellar-sweep-1
+wandb: ⭐️ View project at https://wandb.ai/pimdewildt11-eindhoven-university-of-technology/SPO_pretrainer_SnelliusSweep
+wandb: 🧹 View sweep at https://wandb.ai/pimdewildt11-eindhoven-university-of-technology/SPO_pretrainer_SnelliusSweep/sweeps/hg0vdhnh
+wandb: 🚀 View run at https://wandb.ai/pimdewildt11-eindhoven-university-of-technology/SPO_pretrainer_SnelliusSweep/runs/shbcny7b
+/sw/arch/RHEL8/EB_production/2023/software/PyTorch/2.1.2-foss-2023a-CUDA-12.1.1/lib/python3.11/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at /tmp/jenkins/build/PyTorch/2.1.2/foss-2023a-CUDA-12.1.1/pytorch-v2.1.2/aten/src/ATen/native/TensorShape.cpp:3526.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Traceback (most recent call last):
+  File "/gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/pretrain.py", line 52, in pretrain
+    output = model(batch_coords)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/sw/arch/RHEL8/EB_production/2023/software/PyTorch/2.1.2-foss-2023a-CUDA-12.1.1/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sw/arch/RHEL8/EB_production/2023/software/PyTorch/2.1.2-foss-2023a-CUDA-12.1.1/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/model.py", line 64, in forward
+    x = self.shared_block(x)
+        ^^^^^^^^^^^^^^^^^^^^
+  File "/sw/arch/RHEL8/EB_production/2023/software/PyTorch/2.1.2-foss-2023a-CUDA-12.1.1/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sw/arch/RHEL8/EB_production/2023/software/PyTorch/2.1.2-foss-2023a-CUDA-12.1.1/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sw/arch/RHEL8/EB_production/2023/software/PyTorch/2.1.2-foss-2023a-CUDA-12.1.1/lib/python3.11/site-packages/torch/nn/modules/container.py", line 215, in forward
+    input = module(input)
+            ^^^^^^^^^^^^^
+  File "/sw/arch/RHEL8/EB_production/2023/software/PyTorch/2.1.2-foss-2023a-CUDA-12.1.1/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sw/arch/RHEL8/EB_production/2023/software/PyTorch/2.1.2-foss-2023a-CUDA-12.1.1/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/model.py", line 31, in forward
+    return torch.sin(self.omega_0 * x)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.78 GiB. GPU 0 has a total capacty of 39.50 GiB of which 38.12 MiB is free. Including non-PyTorch memory, this process has 39.45 GiB memory in use. Of the allocated memory 38.92 GiB is allocated by PyTorch, and 41.40 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+wandb: - 0.009 MB of 0.009 MB uploadedwandb: \ 0.009 MB of 0.017 MB uploadedwandb: | 0.009 MB of 0.017 MB uploadedwandb:                                                                                
+wandb: 🚀 View run stellar-sweep-1 at: https://wandb.ai/pimdewildt11-eindhoven-university-of-technology/SPO_pretrainer_SnelliusSweep/runs/shbcny7b
+wandb: ⭐️ View project at: https://wandb.ai/pimdewildt11-eindhoven-university-of-technology/SPO_pretrainer_SnelliusSweep
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20241023_234515-shbcny7b/logs
+wandb: WARNING The legacy backend is deprecated. In future versions, `wandb-core` will become the sole backend service, and the `wandb.require('legacy-service')` flag will be removed. For more information, visit https://wandb.me/wandb-core
+Traceback (most recent call last):
+  File "/gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/pretrain.py", line 107, in <module>
+    pretrain(default_config)
+  File "/gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/pretrain.py", line 52, in pretrain
+    output = model(batch_coords)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/sw/arch/RHEL8/EB_production/2023/software/PyTorch/2.1.2-foss-2023a-CUDA-12.1.1/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sw/arch/RHEL8/EB_production/2023/software/PyTorch/2.1.2-foss-2023a-CUDA-12.1.1/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/model.py", line 64, in forward
+    x = self.shared_block(x)
+        ^^^^^^^^^^^^^^^^^^^^
+  File "/sw/arch/RHEL8/EB_production/2023/software/PyTorch/2.1.2-foss-2023a-CUDA-12.1.1/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sw/arch/RHEL8/EB_production/2023/software/PyTorch/2.1.2-foss-2023a-CUDA-12.1.1/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sw/arch/RHEL8/EB_production/2023/software/PyTorch/2.1.2-foss-2023a-CUDA-12.1.1/lib/python3.11/site-packages/torch/nn/modules/container.py", line 215, in forward
+    input = module(input)
+            ^^^^^^^^^^^^^
+  File "/sw/arch/RHEL8/EB_production/2023/software/PyTorch/2.1.2-foss-2023a-CUDA-12.1.1/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sw/arch/RHEL8/EB_production/2023/software/PyTorch/2.1.2-foss-2023a-CUDA-12.1.1/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/model.py", line 31, in forward
+    return torch.sin(self.omega_0 * x)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.78 GiB. GPU 0 has a total capacty of 39.50 GiB of which 38.12 MiB is free. Including non-PyTorch memory, this process has 39.45 GiB memory in use. Of the allocated memory 38.92 GiB is allocated by PyTorch, and 41.40 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+2024-10-23 23:45:27,089 - wandb.wandb_agent - INFO - Cleaning up finished run: shbcny7b
+2024-10-23 23:45:27,857 - wandb.wandb_agent - INFO - Agent received command: run
+2024-10-23 23:45:27,857 - wandb.wandb_agent - INFO - Agent starting run with config:
+	batch_size: 25
+	learning_rate: 9.547814859238038e-05
+	omega_0: 30
+	shared_depth: 6
+	shared_width: 256
+	unique_depth: 2
+	unique_width: 128
+2024-10-23 23:45:27,860 - wandb.wandb_agent - INFO - About to run command: /usr/bin/env python pretrain.py --batch_size=25 --learning_rate=9.547814859238038e-05 --omega_0=30 --shared_depth=6 --shared_width=256 --unique_depth=2 --unique_width=128
+wandb: Currently logged in as: pimdewildt11 (pimdewildt11-eindhoven-university-of-technology). Use `wandb login --relogin` to force relogin
+wandb: WARNING Ignored wandb.init() arg project when running a sweep.
+2024-10-23 23:45:32,871 - wandb.wandb_agent - INFO - Running runs: ['wzqbhxik']
+wandb: Tracking run with wandb version 0.18.5
+wandb: Run data is saved locally in /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241023_234532-wzqbhxik
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run scarlet-sweep-2
+wandb: ⭐️ View project at https://wandb.ai/pimdewildt11-eindhoven-university-of-technology/SPO_pretrainer_SnelliusSweep
+wandb: 🧹 View sweep at https://wandb.ai/pimdewildt11-eindhoven-university-of-technology/SPO_pretrainer_SnelliusSweep/sweeps/hg0vdhnh
+wandb: 🚀 View run at https://wandb.ai/pimdewildt11-eindhoven-university-of-technology/SPO_pretrainer_SnelliusSweep/runs/wzqbhxik
+/sw/arch/RHEL8/EB_production/2023/software/PyTorch/2.1.2-foss-2023a-CUDA-12.1.1/lib/python3.11/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at /tmp/jenkins/build/PyTorch/2.1.2/foss-2023a-CUDA-12.1.1/pytorch-v2.1.2/aten/src/ATen/native/TensorShape.cpp:3526.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Epoch 1  : Processed batch 1 /8104.   Epoch 1  : Processed batch 2 /8104.   Epoch 1  : Processed batch 3 /8104.   Epoch 1  : Processed batch 4 /8104.   Epoch 1  : Processed batch 5 /8104.   Epoch 1  : Processed batch 6 /8104.   Epoch 1  : Processed batch 7 /8104.   Epoch 1  : Processed batch 8 /8104.   Epoch 1  : Processed batch 9 /8104.   Epoch 1  : Processed batch 10/8104.   Epoch 1  : Processed batch 11/8104.   Epoch 1  : Processed batch 12/8104.   Epoch 1  : Processed batch 13/8104.   Epoch 1  : Processed batch 14/8104.   Epoch 1  : Processed batch 15/8104.   Epoch 1  : Processed batch 16/8104.   Epoch 1  : Processed batch 17/8104.   Epoch 1  : Processed batch 18/8104.   Epoch 1  : Processed batch 19/8104.   Epoch 1  : Processed batch 20/8104.   Epoch 1  : Processed batch 21/8104.   Epoch 1  : Processed batch 22/8104.   Epoch 1  : Processed batch 23/8104.   Epoch 1  : Processed batch 24/8104.   Epoch 1  : Processed batch 25/8104.   Epoch 1  : Processed batch 26/8104.   Epoch 1  : Processed batch 27/8104.   Epoch 1  : Processed batch 28/8104.   Epoch 1  : Processed batch 29/8104.   Epoch 1  : Processed batch 30/8104.   Epoch 1  : Processed batch 31/8104.   Epoch 1  : Processed batch 32/8104.   Epoch 1  : Processed batch 33/8104.   Epoch 1  : Processed batch 34/8104.   Epoch 1  : Processed batch 35/8104.   Epoch 1  : Processed batch 36/8104.   Epoch 1  : Processed batch 37/8104.   Epoch 1  : Processed batch 38/8104.   Epoch 1  : Processed batch 39/8104.   Epoch 1  : Processed batch 40/8104.   Epoch 1  : Processed batch 41/8104.   Epoch 1  : Processed batch 42/8104.   Epoch 1  : Processed batch 43/8104.   Epoch 1  : Processed batch 44/8104.   Epoch 1  : Processed batch 45/8104.   Epoch 1  : Processed batch 46/8104.   Epoch 1  : Processed batch 47/8104.   Epoch 1  : Processed batch 48/8104.   Epoch 1  : Processed batch 49/8104.   Epoch 1  : Processed batch 50/8104.   Epoch 1  : Processed batch 51/8104.   Epoch 1  : Processed batch 52/8104.   Epoch 1  : Processed batch 53/8104.   Epoch 1  : Processed batch 54/8104.   Epoch 1  : Processed batch 55/8104.   Epoch 1  : Processed batch 56/8104.   Epoch 1  : Processed batch 57/8104.   Epoch 1  : Processed batch 58/8104.   Epoch 1  : Processed batch 59/8104.   Epoch 1  : Processed batch 60/8104.   Epoch 1  : Processed batch 61/8104.   Epoch 1  : Processed batch 62/8104.   Epoch 1  : Processed batch 63/8104.   Epoch 1  : Processed batch 64/8104.   Epoch 1  : Processed batch 65/8104.   Epoch 1  : Processed batch 66/8104.   Epoch 1  : Processed batch 67/8104.   Epoch 1  : Processed batch 68/8104.   Epoch 1  : Processed batch 69/8104.   Epoch 1  : Processed batch 70/8104.   Epoch 1  : Processed batch 71/8104.   Epoch 1  : Processed batch 72/8104.   Epoch 1  : Processed batch 73/8104.   Epoch 1  : Processed batch 74/8104.   Epoch 1  : Processed batch 75/8104.   Epoch 1  : Processed batch 76/8104.   Epoch 1  : Processed batch 77/8104.   Epoch 1  : Processed batch 78/8104.   Epoch 1  : Processed batch 79/8104.   Epoch 1  : Processed batch 80/8104.   Epoch 1  : Processed batch 81/8104.   Epoch 1  : Processed batch 82/8104.   Epoch 1  : Processed batch 83/8104.   Epoch 1  : Processed batch 84/8104.   Epoch 1  : Processed batch 85/8104.   Epoch 1  : Processed batch 86/8104.   Epoch 1  : Processed batch 87/8104.   Epoch 1  : Processed batch 88/8104.   Epoch 1  : Processed batch 89/8104.   Epoch 1  : Processed batch 90/8104.   Epoch 1  : Processed batch 91/8104.   Epoch 1  : Processed batch 92/8104.   Epoch 1  : Processed batch 93/8104.   Epoch 1  : Processed batch 94/8104.   Epoch 1  : Processed batch 95/8104.   Epoch 1  : Processed batch 96/8104.   Epoch 1  : Processed batch 97/8104.   Epoch 1  : Processed batch 98/8104.   Epoch 1  : Processed batch 99/8104.   Epoch 1  : Processed batch 100/8104.   Epoch 1  : Processed batch 101/8104.   Epoch 1  : Processed batch 102/8104.   Epoch 1  : Processed batch 103/8104.   Epoch 1  : Processed batch 104/8104.   Epoch 1  : Processed batch 105/8104.   Epoch 1  : Processed batch 106/8104.   Epoch 1  : Processed batch 107/8104.   Epoch 1  : Processed batch 108/8104.   Epoch 1  : Processed batch 109/8104.   Epoch 1  : Processed batch 110/8104.   Epoch 1  : Processed batch 111/8104.   Epoch 1  : Processed batch 112/8104.   Epoch 1  : Processed batch 113/8104.   Epoch 1  : Processed batch 114/8104.   Epoch 1  : Processed batch 115/8104.   Epoch 1  : Processed batch 116/8104.   Epoch 1  : Processed batch 117/8104.   Epoch 1  : Processed batch 118/8104.   Epoch 1  : Processed batch 119/8104.   Epoch 1  : Processed batch 120/8104.   Epoch 1  : Processed batch 121/8104.   Epoch 1  : Processed batch 122/8104.   Epoch 1  : Processed batch 123/8104.   Epoch 1  : Processed batch 124/8104.   Epoch 1  : Processed batch 125/8104.   Epoch 1  : Processed batch 126/8104.   Epoch 1  : Processed batch 127/8104.   Epoch 1  : Processed batch 128/8104.   Epoch 1  : Processed batch 129/8104.   Epoch 1  : Processed batch 130/8104.   Epoch 1  : Processed batch 131/8104.   Epoch 1  : Processed batch 132/8104.   Epoch 1  : Processed batch 133/8104.   Epoch 1  : Processed batch 134/8104.   Epoch 1  : Processed batch 135/8104.   Epoch 1  : Processed batch 136/8104.   Epoch 1  : Processed batch 137/8104.   Epoch 1  : Processed batch 138/8104.   Epoch 1  : Processed batch 139/8104.   Epoch 1  : Processed batch 140/8104.   Epoch 1  : Processed batch 141/8104.   Epoch 1  : Processed batch 142/8104.   Epoch 1  : Processed batch 143/8104.   Epoch 1  : Processed batch 144/8104.   Epoch 1  : Processed batch 145/8104.   Epoch 1  : Processed batch 146/8104.   Epoch 1  : Processed batch 147/8104.   Epoch 1  : Processed batch 148/8104.   Epoch 1  : Processed batch 149/8104.   Epoch 1  : Processed batch 150/8104.   Epoch 1  : Processed batch 151/8104.   Epoch 1  : Processed batch 152/8104.   Epoch 1  : Processed batch 153/8104.   Epoch 1  : Processed batch 154/8104.   Epoch 1  : Processed batch 155/8104.   Epoch 1  : Processed batch 156/8104.   Epoch 1  : Processed batch 157/8104.   Epoch 1  : Processed batch 158/8104.   Epoch 1  : Processed batch 159/8104.   Epoch 1  : Processed batch 160/8104.   Epoch 1  : Processed batch 161/8104.   Epoch 1  : Processed batch 162/8104.   Epoch 1  : Processed batch 163/8104.   Epoch 1  : Processed batch 164/8104.   Epoch 1  : Processed batch 165/8104.   Epoch 1  : Processed batch 166/8104.   Epoch 1  : Processed batch 167/8104.   Epoch 1  : Processed batch 168/8104.   Epoch 1  : Processed batch 169/8104.   Epoch 1  : Processed batch 170/8104.   Epoch 1  : Processed batch 171/8104.   Epoch 1  : Processed batch 172/8104.   Epoch 1  : Processed batch 173/8104.   Epoch 1  : Processed batch 174/8104.   Epoch 1  : Processed batch 175/8104.   Epoch 1  : Processed batch 176/8104.   Epoch 1  : Processed batch 177/8104.   Epoch 1  : Processed batch 178/8104.   Epoch 1  : Processed batch 179/8104.   Epoch 1  : Processed batch 180/8104.   Epoch 1  : Processed batch 181/8104.   Epoch 1  : Processed batch 182/8104.   Epoch 1  : Processed batch 183/8104.   Epoch 1  : Processed batch 184/8104.   Epoch 1  : Processed batch 185/8104.   Epoch 1  : Processed batch 186/8104.   Epoch 1  : Processed batch 187/8104.   Epoch 1  : Processed batch 188/8104.   Epoch 1  : Processed batch 189/8104.   Epoch 1  : Processed batch 190/8104.   Epoch 1  : Processed batch 191/8104.   Epoch 1  : Processed batch 192/8104.   Epoch 1  : Processed batch 193/8104.   Epoch 1  : Processed batch 194/8104.   Epoch 1  : Processed batch 195/8104.   Epoch 1  : Processed batch 196/8104.   Epoch 1  : Processed batch 197/8104.   Epoch 1  : Processed batch 198/8104.   Epoch 1  : Processed batch 199/8104.   Epoch 1  : Processed batch 200/8104.   Epoch 1  : Processed batch 201/8104.   Epoch 1  : Processed batch 202/8104.   Epoch 1  : Processed batch 203/8104.   Epoch 1  : Processed batch 204/8104.   Epoch 1  : Processed batch 205/8104.   Epoch 1  : Processed batch 206/8104.   Epoch 1  : Processed batch 207/8104.   Epoch 1  : Processed batch 208/8104.   Epoch 1  : Processed batch 209/8104.   Epoch 1  : Processed batch 210/8104.   Epoch 1  : Processed batch 211/8104.   Epoch 1  : Processed batch 212/8104.   Epoch 1  : Processed batch 213/8104.   Epoch 1  : Processed batch 214/8104.   Epoch 1  : Processed batch 215/8104.   Epoch 1  : Processed batch 216/8104.   Epoch 1  : Processed batch 217/8104.   Epoch 1  : Processed batch 218/8104.   Epoch 1  : Processed batch 219/8104.   Epoch 1  : Processed batch 220/8104.   Epoch 1  : Processed batch 221/8104.   Epoch 1  : Processed batch 222/8104.   Epoch 1  : Processed batch 223/8104.   Epoch 1  : Processed batch 224/8104.   Epoch 1  : Processed batch 225/8104.   Epoch 1  : Processed batch 226/8104.   Epoch 1  : Processed batch 227/8104.   Epoch 1  : Processed batch 228/8104.   Epoch 1  : Processed batch 229/8104.   Epoch 1  : Processed batch 230/8104.   Epoch 1  : Processed batch 231/8104.   Epoch 1  : Processed batch 232/8104.   Epoch 1  : Processed batch 233/8104.   Epoch 1  : Processed batch 234/8104.   Epoch 1  : Processed batch 235/8104.   Epoch 1  : Processed batch 236/8104.   Epoch 1  : Processed batch 237/8104.   Epoch 1  : Processed batch 238/8104.   Epoch 1  : Processed batch 239/8104.   Epoch 1  : Processed batch 240/8104.   Epoch 1  : Processed batch 241/8104.   Epoch 1  : Processed batch 242/8104.   Epoch 1  : Processed batch 243/8104.   Epoch 1  : Processed batch 244/8104.   Epoch 1  : Processed batch 245/8104.   Epoch 1  : Processed batch 246/8104.   Epoch 1  : Processed batch 247/8104.   Epoch 1  : Processed batch 248/8104.   Epoch 1  : Processed batch 249/8104.   Epoch 1  : Processed batch 250/8104.   Epoch 1  : Processed batch 251/8104.   Epoch 1  : Processed batch 252/8104.   Epoch 1  : Processed batch 253/8104.   Epoch 1  : Processed batch 254/8104.   Epoch 1  : Processed batch 255/8104.   Epoch 1  : Processed batch 256/8104.   Epoch 1  : Processed batch 257/8104.   Epoch 1  : Processed batch 258/8104.   Epoch 1  : Processed batch 259/8104.   Epoch 1  : Processed batch 260/8104.   Epoch 1  : Processed batch 261/8104.   Epoch 1  : Processed batch 262/8104.   Epoch 1  : Processed batch 263/8104.   Epoch 1  : Processed batch 264/8104.   Epoch 1  : Processed batch 265/8104.   Epoch 1  : Processed batch 266/8104.   Epoch 1  : Processed batch 267/8104.   Epoch 1  : Processed batch 268/8104.   Epoch 1  : Processed batch 269/8104.   Epoch 1  : Processed batch 270/8104.   Epoch 1  : Processed batch 271/8104.   Epoch 1  : Processed batch 272/8104.   Epoch 1  : Processed batch 273/8104.   Epoch 1  : Processed batch 274/8104.   Epoch 1  : Processed batch 275/8104.   Epoch 1  : Processed batch 276/8104.   Epoch 1  : Processed batch 277/8104.   Epoch 1  : Processed batch 278/8104.   Epoch 1  : Processed batch 279/8104.   Epoch 1  : Processed batch 280/8104.   Epoch 1  : Processed batch 281/8104.   Epoch 1  : Processed batch 282/8104.   Epoch 1  : Processed batch 283/8104.   Epoch 1  : Processed batch 284/8104.   Epoch 1  : Processed batch 285/8104.   Epoch 1  : Processed batch 286/8104.   Epoch 1  : Processed batch 287/8104.   Epoch 1  : Processed batch 288/8104.   Epoch 1  : Processed batch 289/8104.   Epoch 1  : Processed batch 290/8104.   Epoch 1  : Processed batch 291/8104.   Epoch 1  : Processed batch 292/8104.   Epoch 1  : Processed batch 293/8104.   Epoch 1  : Processed batch 294/8104.   Epoch 1  : Processed batch 295/8104.   Epoch 1  : Processed batch 296/8104.   Epoch 1  : Processed batch 297/8104.   Epoch 1  : Processed batch 298/8104.   Epoch 1  : Processed batch 299/8104.   Epoch 1  : Processed batch 300/8104.   Epoch 1  : Processed batch 301/8104.   Epoch 1  : Processed batch 302/8104.   Epoch 1  : Processed batch 303/8104.   Epoch 1  : Processed batch 304/8104.   Epoch 1  : Processed batch 305/8104.   Epoch 1  : Processed batch 306/8104.   Epoch 1  : Processed batch 307/8104.   Epoch 1  : Processed batch 308/8104.   Epoch 1  : Processed batch 309/8104.   Epoch 1  : Processed batch 310/8104.   Epoch 1  : Processed batch 311/8104.   Epoch 1  : Processed batch 312/8104.   Epoch 1  : Processed batch 313/8104.   Epoch 1  : Processed batch 314/8104.   Epoch 1  : Processed batch 315/8104.   Epoch 1  : Processed batch 316/8104.   Epoch 1  : Processed batch 317/8104.   Epoch 1  : Processed batch 318/8104.   Epoch 1  : Processed batch 319/8104.   Epoch 1  : Processed batch 320/8104.   Epoch 1  : Processed batch 321/8104.   Epoch 1  : Processed batch 322/8104.   Epoch 1  : Processed batch 323/8104.   Epoch 1  : Processed batch 324/8104.   Epoch 1  : Processed batch 325/8104.   Epoch 1  : Processed batch 326/8104.   Epoch 1  : Processed batch 327/8104.   Epoch 1  : Processed batch 328/8104.   Epoch 1  : Processed batch 329/8104.   Epoch 1  : Processed batch 330/8104.   Epoch 1  : Processed batch 331/8104.   Epoch 1  : Processed batch 332/8104.   Epoch 1  : Processed batch 333/8104.   Epoch 1  : Processed batch 334/8104.   Epoch 1  : Processed batch 335/8104.   Epoch 1  : Processed batch 336/8104.   Epoch 1  : Processed batch 337/8104.   Epoch 1  : Processed batch 338/8104.   Epoch 1  : Processed batch 339/8104.   Epoch 1  : Processed batch 340/8104.   Epoch 1  : Processed batch 341/8104.   Epoch 1  : Processed batch 342/8104.   Epoch 1  : Processed batch 343/8104.   Epoch 1  : Processed batch 344/8104.   Epoch 1  : Processed batch 345/8104.   Epoch 1  : Processed batch 346/8104.   Epoch 1  : Processed batch 347/8104.   Epoch 1  : Processed batch 348/8104.   Epoch 1  : Processed batch 349/8104.   Epoch 1  : Processed batch 350/8104.   Epoch 1  : Processed batch 351/8104.   Epoch 1  : Processed batch 352/8104.   Epoch 1  : Processed batch 353/8104.   Epoch 1  : Processed batch 354/8104.   Epoch 1  : Processed batch 355/8104.   Epoch 1  : Processed batch 356/8104.   Epoch 1  : Processed batch 357/8104.   Epoch 1  : Processed batch 358/8104.   Epoch 1  : Processed batch 359/8104.   Epoch 1  : Processed batch 360/8104.   Epoch 1  : Processed batch 361/8104.   Epoch 1  : Processed batch 362/8104.   Epoch 1  : Processed batch 363/8104.   Epoch 1  : Processed batch 364/8104.   Epoch 1  : Processed batch 365/8104.   Epoch 1  : Processed batch 366/8104.   Epoch 1  : Processed batch 367/8104.   Epoch 1  : Processed batch 368/8104.   Epoch 1  : Processed batch 369/8104.   Epoch 1  : Processed batch 370/8104.   Epoch 1  : Processed batch 371/8104.   Epoch 1  : Processed batch 372/8104.   Epoch 1  : Processed batch 373/8104.   Epoch 1  : Processed batch 374/8104.   Epoch 1  : Processed batch 375/8104.   Epoch 1  : Processed batch 376/8104.   Epoch 1  : Processed batch 377/8104.   Epoch 1  : Processed batch 378/8104.   Epoch 1  : Processed batch 379/8104.   Epoch 1  : Processed batch 380/8104.   Epoch 1  : Processed batch 381/8104.   Epoch 1  : Processed batch 382/8104.   Epoch 1  : Processed batch 383/8104.   Epoch 1  : Processed batch 384/8104.   Epoch 1  : Processed batch 385/8104.   Epoch 1  : Processed batch 386/8104.   Epoch 1  : Processed batch 387/8104.   Epoch 1  : Processed batch 388/8104.   Epoch 1  : Processed batch 389/8104.   Epoch 1  : Processed batch 390/8104.   Epoch 1  : Processed batch 391/8104.   Epoch 1  : Processed batch 392/8104.   Epoch 1  : Processed batch 393/8104.   Epoch 1  : Processed batch 394/8104.   Epoch 1  : Processed batch 395/8104.   Epoch 1  : Processed batch 396/8104.   Epoch 1  : Processed batch 397/8104.   Epoch 1  : Processed batch 398/8104.   wandb: ERROR Error while calling W&B API: could not find agent ee5rsu9v during agentHeartbeat (<Response [404]>)
+wandb: Terminating and syncing runs. Press ctrl-c to kill.
+wandb: ERROR Dropped streaming file chunk (see wandb/debug-internal.log)
+Traceback (most recent call last):
+  File "/gpfs/home2/scur1981/2AMM20_NFgroup1/lib/python3.11/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/gpfs/home2/scur1981/2AMM20_NFgroup1/lib/python3.11/site-packages/wandb/sdk/internal/internal_api.py", line 354, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/gpfs/home2/scur1981/2AMM20_NFgroup1/lib/python3.11/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/gpfs/home2/scur1981/2AMM20_NFgroup1/lib/python3.11/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/gpfs/home2/scur1981/2AMM20_NFgroup1/lib/python3.11/site-packages/wandb/sdk/lib/gql_request.py", line 59, in execute
+    request.raise_for_status()
+  File "/sw/arch/RHEL8/EB_production/2023/software/poetry/1.5.1-GCCcore-12.3.0/lib/python3.11/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://api.wandb.ai/graphql
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/gpfs/home2/scur1981/2AMM20_NFgroup1/lib/python3.11/site-packages/wandb/sdk/internal/internal_api.py", line 3087, in agent_heartbeat
+    response = self.gql(
+               ^^^^^^^^^
+  File "/gpfs/home2/scur1981/2AMM20_NFgroup1/lib/python3.11/site-packages/wandb/sdk/internal/internal_api.py", line 326, in gql
+    ret = self._retry_gql(
+          ^^^^^^^^^^^^^^^^
+  File "/gpfs/home2/scur1981/2AMM20_NFgroup1/lib/python3.11/site-packages/wandb/sdk/lib/retry.py", line 147, in __call__
+    retry_timedelta_triggered = check_retry_fn(e)
+                                ^^^^^^^^^^^^^^^^^
+  File "/gpfs/home2/scur1981/2AMM20_NFgroup1/lib/python3.11/site-packages/wandb/util.py", line 910, in no_retry_auth
+    raise CommError(
+wandb.errors.errors.CommError: It appears that you do not have permission to access the requested resource. Please reach out to the project owner to grant you access. If you have the correct permissions, verify that there are no issues with your networking setup.(Error 404: Not Found)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/gpfs/home2/scur1981/2AMM20_NFgroup1/bin/wandb", line 8, in <module>
+    sys.exit(cli())
+             ^^^^^
+  File "/sw/arch/RHEL8/EB_production/2023/software/Python-bundle-PyPI/2023.06-GCCcore-12.3.0/lib/python3.11/site-packages/click/core.py", line 1130, in __call__
+    return self.main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sw/arch/RHEL8/EB_production/2023/software/Python-bundle-PyPI/2023.06-GCCcore-12.3.0/lib/python3.11/site-packages/click/core.py", line 1055, in main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File "/sw/arch/RHEL8/EB_production/2023/software/Python-bundle-PyPI/2023.06-GCCcore-12.3.0/lib/python3.11/site-packages/click/core.py", line 1657, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sw/arch/RHEL8/EB_production/2023/software/Python-bundle-PyPI/2023.06-GCCcore-12.3.0/lib/python3.11/site-packages/click/core.py", line 1404, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sw/arch/RHEL8/EB_production/2023/software/Python-bundle-PyPI/2023.06-GCCcore-12.3.0/lib/python3.11/site-packages/click/core.py", line 760, in invoke
+    return __callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sw/arch/RHEL8/EB_production/2023/software/Python-bundle-PyPI/2023.06-GCCcore-12.3.0/lib/python3.11/site-packages/click/decorators.py", line 26, in new_func
+    return f(get_current_context(), *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/gpfs/home2/scur1981/2AMM20_NFgroup1/lib/python3.11/site-packages/wandb/cli/cli.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/gpfs/home2/scur1981/2AMM20_NFgroup1/lib/python3.11/site-packages/wandb/cli/cli.py", line 1677, in agent
+    wandb_agent.agent(sweep_id, entity=entity, project=project, count=count)
+  File "/gpfs/home2/scur1981/2AMM20_NFgroup1/lib/python3.11/site-packages/wandb/wandb_agent.py", line 572, in agent
+    return run_agent(
+           ^^^^^^^^^^
+  File "/gpfs/home2/scur1981/2AMM20_NFgroup1/lib/python3.11/site-packages/wandb/wandb_agent.py", line 530, in run_agent
+    agent.run()
+  File "/gpfs/home2/scur1981/2AMM20_NFgroup1/lib/python3.11/site-packages/wandb/wandb_agent.py", line 279, in run
+    commands = self._api.agent_heartbeat(agent_id, {}, run_status)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/gpfs/home2/scur1981/2AMM20_NFgroup1/lib/python3.11/site-packages/wandb/apis/internal.py", line 157, in agent_heartbeat
+    return self.api.agent_heartbeat(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/gpfs/home2/scur1981/2AMM20_NFgroup1/lib/python3.11/site-packages/wandb/sdk/internal/internal_api.py", line 3098, in agent_heartbeat
+    message = ast.literal_eval(e.args[0])["message"]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sw/arch/RHEL8/EB_production/2023/software/Python/3.11.3-GCCcore-12.3.0/lib/python3.11/ast.py", line 64, in literal_eval
+    node_or_string = parse(node_or_string.lstrip(" \t"), mode='eval')
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sw/arch/RHEL8/EB_production/2023/software/Python/3.11.3-GCCcore-12.3.0/lib/python3.11/ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<unknown>", line 1
+    It appears that you do not have permission to access the requested resource. Please reach out to the project owner to grant you access. If you have the correct permissions, verify that there are no issues with your networking setup.(Error 404: Not Found)
+       ^^^^^^^
+SyntaxError: invalid syntax
+
+JOB STATISTICS
+==============
+Job ID: 8255964
+Cluster: snellius
+User/Group: scur1981/scur1981
+State: FAILED (exit code 1)
+Nodes: 1
+Cores per node: 18
+CPU Utilized: 00:01:34
+CPU Efficiency: 5.68% of 00:27:36 core-walltime
+Job Wall-clock time: 00:01:32
+Memory Utilized: 777.08 MB
+Memory Efficiency: 0.63% of 120.00 GB
