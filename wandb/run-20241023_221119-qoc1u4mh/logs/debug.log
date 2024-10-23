@@ -1,0 +1,30 @@
+2024-10-23 22:11:19,372 INFO    MainThread:4020 [wandb_setup.py:_flush():76] Current SDK version is 0.16.6
+2024-10-23 22:11:19,372 INFO    MainThread:4020 [wandb_setup.py:_flush():76] Configure stats pid to 4020
+2024-10-23 22:11:19,373 INFO    MainThread:4020 [wandb_setup.py:_flush():76] Loading settings from C:\Users\pimde\.config\wandb\settings
+2024-10-23 22:11:19,373 INFO    MainThread:4020 [wandb_setup.py:_flush():76] Loading settings from C:\Users\pimde\OneDrive\Documents\GitHub\2AMM20-MetaLearningSharedParameters\wandb\settings
+2024-10-23 22:11:19,373 WARNING MainThread:4020 [wandb_setup.py:_flush():76] Unknown environment variable: WANDB_SERVICE
+2024-10-23 22:11:19,373 INFO    MainThread:4020 [wandb_setup.py:_flush():76] Loading settings from environment variables: {'root_dir': 'C:\\Users\\pimde\\OneDrive\\Documents\\GitHub\\2AMM20-MetaLearningSharedParameters', 'entity': 'pimdewildt11-eindhoven-university-of-technology', 'project': 'SPO_pretrainer_sweeptest', 'run_id': 'qoc1u4mh', 'sweep_id': 'dblsm50u', 'sweep_param_path': 'C:\\Users\\pimde\\OneDrive\\Documents\\GitHub\\2AMM20-MetaLearningSharedParameters\\wandb\\sweep-dblsm50u\\config-qoc1u4mh.yaml'}
+2024-10-23 22:11:19,373 INFO    MainThread:4020 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-10-23 22:11:19,373 INFO    MainThread:4020 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'pretrain.py', 'program_abspath': 'C:\\Users\\pimde\\OneDrive\\Documents\\GitHub\\2AMM20-MetaLearningSharedParameters\\pretrain.py', 'program': 'C:\\Users\\pimde\\OneDrive\\Documents\\GitHub\\2AMM20-MetaLearningSharedParameters\\pretrain.py'}
+2024-10-23 22:11:19,373 INFO    MainThread:4020 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-10-23 22:11:19,373 INFO    MainThread:4020 [wandb_init.py:_log_setup():521] Logging user logs to C:\Users\pimde\OneDrive\Documents\GitHub\2AMM20-MetaLearningSharedParameters\wandb\run-20241023_221119-qoc1u4mh\logs\debug.log
+2024-10-23 22:11:19,373 INFO    MainThread:4020 [wandb_init.py:_log_setup():522] Logging internal logs to C:\Users\pimde\OneDrive\Documents\GitHub\2AMM20-MetaLearningSharedParameters\wandb\run-20241023_221119-qoc1u4mh\logs\debug-internal.log
+2024-10-23 22:11:19,373 INFO    MainThread:4020 [wandb_init.py:init():561] calling init triggers
+2024-10-23 22:11:19,373 INFO    MainThread:4020 [wandb_init.py:init():568] wandb.init called with sweep_config: {'batch_size': 8, 'learning_rate': 3.7138888990771435e-05, 'omega_0': 15, 'shared_depth': 12, 'shared_width': 256, 'unique_depth': 2, 'unique_width': 256}
+config: {'epochs': 10000, 'patience': 50, 'learning_rate': 3.7138888990771435e-05, 'batch_size': 8, 'shared_width': 256, 'shared_depth': 12, 'unique_width': 256, 'unique_depth': 2, 'omega_0': 15}
+2024-10-23 22:11:19,373 INFO    MainThread:4020 [wandb_init.py:init():611] starting backend
+2024-10-23 22:11:19,373 INFO    MainThread:4020 [wandb_init.py:init():615] setting up manager
+2024-10-23 22:11:19,379 INFO    MainThread:4020 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=spawn, using: spawn
+2024-10-23 22:11:19,380 INFO    MainThread:4020 [wandb_init.py:init():623] backend started and connected
+2024-10-23 22:11:19,391 INFO    MainThread:4020 [wandb_run.py:_config_callback():1347] config_cb None None {'batch_size': 8, 'learning_rate': 3.7138888990771435e-05, 'omega_0': 15, 'shared_depth': 12, 'shared_width': 256, 'unique_depth': 2, 'unique_width': 256}
+2024-10-23 22:11:19,391 INFO    MainThread:4020 [wandb_init.py:init():715] updated telemetry
+2024-10-23 22:11:19,392 INFO    MainThread:4020 [wandb_init.py:init():748] communicating run to backend with 90.0 second timeout
+2024-10-23 22:11:19,852 INFO    MainThread:4020 [wandb_run.py:_on_init():2357] communicating current version
+2024-10-23 22:11:19,923 INFO    MainThread:4020 [wandb_run.py:_on_init():2366] got version response upgrade_message: "wandb version 0.18.5 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2024-10-23 22:11:19,923 INFO    MainThread:4020 [wandb_init.py:init():799] starting run threads in backend
+2024-10-23 22:11:22,557 INFO    MainThread:4020 [wandb_run.py:_console_start():2335] atexit reg
+2024-10-23 22:11:22,558 INFO    MainThread:4020 [wandb_run.py:_redirect():2190] redirect: wrap_raw
+2024-10-23 22:11:22,558 INFO    MainThread:4020 [wandb_run.py:_redirect():2255] Wrapping output streams.
+2024-10-23 22:11:22,558 INFO    MainThread:4020 [wandb_run.py:_redirect():2280] Redirects installed.
+2024-10-23 22:11:22,558 INFO    MainThread:4020 [wandb_init.py:init():842] run started, returning control to user process

@@ -1,0 +1,44 @@
+# Program to run
+program: pretrain.py
+
+# Search method (grid, random, bayes)
+method: random
+
+# Project
+project: SPO_pretrainer_sweeptest
+
+# Metric to optimize
+metric: 
+  name: avg_loss
+  goal: minimize
+
+# Parameter spaces to search
+parameters:
+  learning_rate:
+    distribution: uniform
+    min: 1e-6
+    max: 1e-4
+  batch_size: 
+    distribution: q_uniform
+    min: 1
+    max: 8
+    q: 1
+  #shared_width:
+  #  distribution: categorical
+  #  values: [128, 256, 512]
+  #shared_depth:
+  #  distribution: q_uniform
+  #  min: 5
+  #  max: 12
+  #  q: 1
+  #unique_width:
+  #  distribution: categorical
+  #  values: [64, 128, 256]
+  #unique_depth:
+  #  distribution: categorical
+  #  values: [1, 2, 3]
+  #omega_0:
+  #  distribution: q_uniform
+  #  min: 10
+  #  max: 60
+  #  q: 1

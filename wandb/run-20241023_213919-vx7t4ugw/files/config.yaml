@@ -1,0 +1,56 @@
+wandb_version: 1
+
+epochs:
+  desc: null
+  value: 1000
+patience:
+  desc: null
+  value: 20
+learning_rate:
+  desc: null
+  value: 0.0001
+batch_size:
+  desc: null
+  value: 10
+shared_width:
+  desc: null
+  value: 256
+shared_depth:
+  desc: null
+  value: 5
+unique_width:
+  desc: null
+  value: 128
+unique_depth:
+  desc: null
+  value: 1
+omega_0:
+  desc: null
+  value: 30
+_wandb:
+  desc: null
+  value:
+    python_version: 3.11.10
+    cli_version: 0.16.6
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1729712359.0
+    t:
+      1:
+      - 1
+      - 41
+      - 55
+      2:
+      - 1
+      - 41
+      - 55
+      3:
+      - 16
+      - 23
+      4: 3.11.10
+      5: 0.16.6
+      8:
+      - 3
+      - 5
+      13: windows-amd64
