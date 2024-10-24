@@ -1,0 +1,30 @@
+# Program to run
+program: spotrain.py
+
+# Search method (grid, random, bayes)
+method: random
+
+# Project
+project: SPO_maintrainer_SnelliusSweep
+entity: pimdewildt11-eindhoven-university-of-technology
+
+# Metric to optimize
+metric: 
+  name: avg_outer_loss
+  goal: minimize
+
+# Parameter spaces to search
+parameters:
+  inner_learning_rate:
+    distribution: uniform
+    min: 1e-6
+    max: 5e-4
+  meta_learning_rate:
+    distribution: uniform
+    min: 5e-6
+    max: 1e-3
+  K:
+    distribution: q_uniform
+    min: 5
+    max: 30
+    q: 5

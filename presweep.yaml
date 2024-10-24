@@ -2,7 +2,7 @@
 program: pretrain.py
 
 # Search method (grid, random, bayes)
-method: random
+method: grid
 
 # Project
 project: SPO_pretrainer_SnelliusSweep2

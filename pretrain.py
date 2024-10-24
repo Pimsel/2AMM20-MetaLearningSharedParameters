@@ -76,7 +76,7 @@ def pretrain(config):
 # Initialize default hyperparameters and parser functionality
 default_config = SimpleNamespace(
     epochs=100000,
-    patience=100,
+    patience=50,
     learning_rate=6e-4,
     batch_size=5,
     shared_width=320,
