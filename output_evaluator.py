@@ -7,27 +7,23 @@ from skimage.metrics import structural_similarity as compare_ssim
 
 
 # Directories with the original and reconstructed images
-original_dir = os.path.expanduser('~/traindata/celeba_smaller')   # Path to original images
-reconstruct_dir = os.path.expanduser('~/traindata/output')   # Path to reconstructed images
+original_dir = r"saved_input"   # Path to original images
+reconstruct_dir = r"saved_output"   # Path to reconstructed images
 
 # Get lists of all files in each directory
 original_images = sorted(os.listdir(original_dir))
 reconstructed_images = sorted(os.listdir(reconstruct_dir))
 
-# Use regex to match the corresponding reconstructed images
-reconstructed_images_filtered = [
-    img for img in reconstructed_images if re.search(r'_output\.jpg$', img)
-]
 
-# Remove the '_output' suffix to match original files
+# Remove the '_input'/'_output' suffix to match files
 reconstructed_images_matching = [
-    re.sub(r'_output\.jpg$', '.jpg', img) for img in reconstructed_images_filtered
+    re.sub(r'_output\.jpg$', '_input.jpg', img) for img in reconstructed_images
 ]
 
 # Now pair original images with reconstructed images
 image_pairs = [
     (os.path.join(original_dir, orig), os.path.join(reconstruct_dir, rec))
-    for orig, rec in zip(original_images, reconstructed_images_filtered)
+    for orig, rec in zip(original_images, reconstructed_images)
     if orig in reconstructed_images_matching
 ]
 

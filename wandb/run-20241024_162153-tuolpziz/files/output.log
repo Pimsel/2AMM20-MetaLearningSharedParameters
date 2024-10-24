@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\Users\pimde\OneDrive\Documents\GitHub\2AMM20-MetaLearningSharedParameters\finetune.py", line 22, in finetune
+    dataset = Data(dataset_path, transform=ToTensor())
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pimde\OneDrive\Documents\GitHub\2AMM20-MetaLearningSharedParameters\train_functions.py", line 13, in __init__
+    self.images_path = [os.path.join(folder_path, fname) for fname in os.listdir(folder_path) if fname.lower().endswith(('.png', '.jpg', '.jpeg'))]
+                                                                      ^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\pimde\\Documents\\2AMM20\\CelebA_thousand'
