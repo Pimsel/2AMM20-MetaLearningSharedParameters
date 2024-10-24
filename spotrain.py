@@ -84,7 +84,7 @@ def spotrain(config):
 
 # Initialize default hyperparameters and parser functionality
 default_config = SimpleNamespace(
-    epochs=100000,
+    epochs=10000,
     patience=20,
     batch_size=5,
     inner_learning_rate=5e-6,

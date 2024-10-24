@@ -16,15 +16,11 @@ metric:
 # Parameter spaces to search
 parameters:
   inner_learning_rate:
-    distribution: uniform
-    min: 1e-6
-    max: 5e-4
+    distribution: categorical
+    values: [1e-6, 1e-5, 5e-5, 1e-4]
   meta_learning_rate:
-    distribution: uniform
-    min: 5e-6
-    max: 1e-3
+    distribution: categorical
+    values: [5e-5, 1e-4, 5e-4, 1e-3]
   K:
-    distribution: q_uniform
-    min: 5
-    max: 30
-    q: 5
+    distribution: categorical
+    values: [5, 12, 20, 30]
