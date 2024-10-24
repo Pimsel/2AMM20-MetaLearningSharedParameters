@@ -1,7 +1,0 @@
-C:\Users\pimde\anaconda3\envs\2AMM20\Lib\site-packages\torch\functional.py:513: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at C:\cb\pytorch_1000000000000\work\aten\src\ATen\native\TensorShape.cpp:3610.)
-  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
-Traceback (most recent call last):
-  File "C:\Users\pimde\OneDrive\Documents\GitHub\2AMM20-MetaLearningSharedParameters\pretrain.py", line 56, in pretrain
-    print(f'\rEpoch {str(epoch+1).just(3)}: Processed batch {str(i+1).ljust(2)}/{len(train_dataloader)}.', end='   ', flush=True)
-                     ^^^^^^^^^^^^^^^^^
-AttributeError: 'str' object has no attribute 'just'

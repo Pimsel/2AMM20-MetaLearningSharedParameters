@@ -14,7 +14,7 @@ module load PyTorch/2.1.2-foss-2023a-CUDA-12.1.1
 module load torchvision/0.16.0-foss-2023a-CUDA-12.1.1
 
 
-source ~/2AMM20_NFgroup1/bin/activate
+source ~/venv_name/bin/activate
 
 
 wandblogin="$(<../wandb.login)"

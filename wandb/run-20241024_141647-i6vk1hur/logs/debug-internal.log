@@ -1,8 +1,0 @@
-{"time":"2024-10-24T14:16:47.265447806+02:00","level":"INFO","msg":"using version","core version":"0.18.5"}
-{"time":"2024-10-24T14:16:47.265498213+02:00","level":"INFO","msg":"created symlink","path":"/gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_141647-i6vk1hur/logs/debug-core.log"}
-{"time":"2024-10-24T14:16:47.374335728+02:00","level":"INFO","msg":"created new stream","id":"i6vk1hur"}
-{"time":"2024-10-24T14:16:47.374371206+02:00","level":"INFO","msg":"stream: started","id":"i6vk1hur"}
-{"time":"2024-10-24T14:16:47.374400925+02:00","level":"INFO","msg":"sender: started","stream_id":"i6vk1hur"}
-{"time":"2024-10-24T14:16:47.374414678+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"i6vk1hur"}}
-{"time":"2024-10-24T14:16:47.374390071+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"i6vk1hur"}}
-{"time":"2024-10-24T14:16:47.574993208+02:00","level":"INFO","msg":"Starting system monitor"}

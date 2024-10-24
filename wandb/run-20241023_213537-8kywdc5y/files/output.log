@@ -1,4 +1,0 @@
-Traceback (most recent call last):
-  File "C:\Users\pimde\OneDrive\Documents\GitHub\2AMM20-MetaLearningSharedParameters\pretrain.py", line 38, in pretrain
-    for epoch in config.epochs:
-TypeError: 'int' object is not iterable

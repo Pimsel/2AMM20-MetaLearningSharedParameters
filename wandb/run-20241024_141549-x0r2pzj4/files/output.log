@@ -1,8 +1,0 @@
-Traceback (most recent call last):
-  File "/gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/spotrain.py", line 20, in spotrain
-    train_dataset = Data(dataset_path, transform=ToTensor())
-                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/train_functions.py", line 13, in __init__
-    self.images_path = [os.path.join(folder_path, fname) for fname in os.listdir(folder_path) if fname.lower().endswith(('.png', '.jpg', '.jpeg'))]
-                                                                      ^^^^^^^^^^^^^^^^^^^^^^^
-FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\pimde\\Documents\\2AMM20\\CelebA_small'

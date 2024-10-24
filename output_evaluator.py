@@ -47,5 +47,5 @@ for original_img_path, reconstructed_img_path in image_pairs:
     ssim_value = compare_ssim(original_img, reconstructed_img, channel_axis=-1)
     ssim_list.append(ssim_value)
 
-print(f'Average PSNR: {np.mean(psnr_list):.2f}        Median PSNR: {np.median(psnr_list):.2f}')
-print(f'Average SSIM: {np.mean(ssim_list):.4f}        Median SSIM: {np.median(ssim_list):.4f}')
+print(f'Average PSNR: {np.mean(psnr_list):.2f}        Median PSNR: {np.median(psnr_list):.2f}        Max PSNR: {np.max(psnr_list):.2f} img{psnr_list.index(np.max(psnr_list))+1}')
+print(f'Average SSIM: {np.mean(ssim_list):.4f}        Median SSIM: {np.median(ssim_list):.4f}        Max SSIM: {np.max(ssim_list):.4f} img{ssim_list.index(np.max(ssim_list))+1}')

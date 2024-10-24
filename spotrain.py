@@ -5,18 +5,16 @@ import torch.optim as optim
 from torchvision.transforms import ToTensor
 from torch.utils.data import DataLoader
 import wandb
-from model import SIREN
 import loss_functions
-from train_functions import Data, prepare_image_for_siren, check_patience
+from train_functions import Data, prepare_image_for_siren
 
 
 def spotrain(config):
-    with wandb.init(project='SPO_maintrainer_Snellius', config=config):
+    with wandb.init(project='SPO_maintrainer', config=config):
         config = wandb.config
         
         # General initializations
-        dataset_path = os.path.expanduser('~/traindata/celeba_smaller')
-        #dataset_path = r'C:\Users\pimde\Documents\2AMM20\CelebA_small'
+        dataset_path = 'celeba_thousand'
         train_dataset = Data(dataset_path, transform=ToTensor())
         train_dataloader = DataLoader(train_dataset, batch_size=config.batch_size, shuffle=True)
 
@@ -33,7 +31,6 @@ def spotrain(config):
         outer_loss_fn = torch.nn.SmoothL1Loss(beta=1.0)
 
         best_loss = 1.0
-        wait = 0
 
         for epoch in range(config.epochs):
             total_outer_loss = 0
@@ -64,6 +61,7 @@ def spotrain(config):
                     
                 output = model(coords)
                 outer_loss = outer_loss_fn(output, targets)
+                total_outer_loss += outer_loss
 
                 if outer_loss < best_loss:
                     best_loss = outer_loss
@@ -77,7 +75,7 @@ def spotrain(config):
                 wandb.log({f'outer_loss': outer_loss.item()})
             
             avg_outer_loss = total_outer_loss / len(train_dataloader)
-            wandb.log({f'total_outer_loss': total_outer_loss})                
+            wandb.log({f'avg_outer_loss': avg_outer_loss})                
     
     wandb.finish()
 
@@ -105,5 +103,4 @@ def parse_args():
 
 if __name__ == '__main__':
     parse_args()
-    #torch.autograd.set_detect_anomaly(True)
     spotrain(default_config)

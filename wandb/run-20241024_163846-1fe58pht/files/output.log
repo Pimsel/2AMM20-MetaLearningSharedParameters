@@ -1,5 +1,0 @@
-Traceback (most recent call last):
-  File "C:\Users\pimde\OneDrive\Documents\GitHub\2AMM20-MetaLearningSharedParameters\finetune.py", line 27, in finetune
-    original_unique_params = list(model.unique_block.parameters()) + list(model.output_layer.parameters())
-                                  ^^^^^
-UnboundLocalError: cannot access local variable 'model' where it is not associated with a value

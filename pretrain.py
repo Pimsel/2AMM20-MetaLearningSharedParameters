@@ -11,11 +11,11 @@ from train_functions import Data, prepare_image_for_siren, check_patience
 
 
 def pretrain(config):
-    with wandb.init(project='SPO_pretrainer_Snellius', config=config):
+    with wandb.init(project='SPO_pretrainer', config=config):
         config = wandb.config
         
         # General initializations
-        dataset_path = os.path.expanduser('~/traindata/celeba_smaller')
+        dataset_path = 'celeba_thousand'
         train_dataset = Data(dataset_path, transform=ToTensor())
         train_dataloader = DataLoader(train_dataset, batch_size=config.batch_size, shuffle=True)
         
