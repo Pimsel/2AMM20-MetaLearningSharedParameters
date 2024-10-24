@@ -15,7 +15,7 @@ def pretrain(config):
         config = wandb.config
         
         # General initializations
-        dataset_path = os.path.expanduser('~/traindata/img_align_celeba')
+        dataset_path = os.path.expanduser('~/traindata/celeba_smaller')
         train_dataset = Data(dataset_path, transform=ToTensor())
         train_dataloader = DataLoader(train_dataset, batch_size=config.batch_size, shuffle=True)
         
@@ -77,11 +77,11 @@ def pretrain(config):
 default_config = SimpleNamespace(
     epochs=100000,
     patience=100,
-    learning_rate=1e-4,
+    learning_rate=6e-4,
     batch_size=5,
-    shared_width=256,
-    shared_depth=5,
-    unique_width=128,
+    shared_width=320,
+    shared_depth=7,
+    unique_width=160,
     unique_depth=1,
     omega_0=30
 )

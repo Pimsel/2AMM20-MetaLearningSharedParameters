@@ -1,9 +1,9 @@
 #!/bin/bash
 
-#SBATCH --time=1:00:00
+#SBATCH --time=9:00:00
 #SBATCH -p gpu
 #SBATCH -N 1
-#SBATCH --tasks-per-node 1
+#SBATCH --tasks-per-node 4
 #SBATCH --gpus=1
 #SBATCH --output=R-%x.%j.out
 

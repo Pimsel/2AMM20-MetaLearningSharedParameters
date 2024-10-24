@@ -1,0 +1,33 @@
+2024-10-24 00:15:51,820 INFO    MainThread:883330 [wandb_setup.py:_flush():79] Current SDK version is 0.18.5
+2024-10-24 00:15:51,821 INFO    MainThread:883330 [wandb_setup.py:_flush():79] Configure stats pid to 883330
+2024-10-24 00:15:51,821 INFO    MainThread:883330 [wandb_setup.py:_flush():79] Loading settings from /home/scur1981/.config/wandb/settings
+2024-10-24 00:15:51,821 INFO    MainThread:883330 [wandb_setup.py:_flush():79] Loading settings from /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/settings
+2024-10-24 00:15:51,821 INFO    MainThread:883330 [wandb_setup.py:_flush():79] Loading settings from environment variables: {'_require_legacy_service': 'true', 'entity': 'pimdewildt11-eindhoven-university-of-technology', 'project': 'SPO_pretrainer_SnelliusSweep', 'sweep_id': '1z3kie91', 'root_dir': '/gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters', 'run_id': 'bipviapf', 'sweep_param_path': '/gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/sweep-1z3kie91/config-bipviapf.yaml'}
+2024-10-24 00:15:51,821 INFO    MainThread:883330 [wandb_setup.py:_flush():79] Applying setup settings: {'mode': None, '_disable_service': None}
+2024-10-24 00:15:51,821 INFO    MainThread:883330 [wandb_setup.py:_flush():79] Inferring run settings from compute environment: {'program_relpath': 'pretrain.py', 'program_abspath': '/gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/pretrain.py', 'program': '/gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/pretrain.py'}
+2024-10-24 00:15:51,821 INFO    MainThread:883330 [wandb_setup.py:_flush():79] Applying login settings: {}
+2024-10-24 00:15:51,821 INFO    MainThread:883330 [wandb_init.py:_log_setup():534] Logging user logs to /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_001551-bipviapf/logs/debug.log
+2024-10-24 00:15:51,821 INFO    MainThread:883330 [wandb_init.py:_log_setup():535] Logging internal logs to /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_001551-bipviapf/logs/debug-internal.log
+2024-10-24 00:15:51,821 INFO    MainThread:883330 [wandb_init.py:init():621] calling init triggers
+2024-10-24 00:15:51,821 INFO    MainThread:883330 [wandb_init.py:init():628] wandb.init called with sweep_config: {'batch_size': 80, 'learning_rate': 1.7299704201520872e-05, 'omega_0': 48, 'shared_depth': 7, 'shared_width': 256, 'unique_depth': 1, 'unique_width': 64}
+config: {'epochs': 100000, 'patience': 100, 'learning_rate': 1.7299704201520872e-05, 'batch_size': 80, 'shared_width': 256, 'shared_depth': 7, 'unique_width': 64, 'unique_depth': 1, 'omega_0': 48}
+2024-10-24 00:15:51,821 INFO    MainThread:883330 [wandb_init.py:init():671] starting backend
+2024-10-24 00:15:51,821 INFO    MainThread:883330 [wandb_init.py:init():675] sending inform_init request
+2024-10-24 00:15:51,825 INFO    MainThread:883330 [backend.py:_multiprocessing_setup():104] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2024-10-24 00:15:51,825 INFO    MainThread:883330 [wandb_init.py:init():688] backend started and connected
+2024-10-24 00:15:51,832 INFO    MainThread:883330 [wandb_run.py:_config_callback():1390] config_cb None None {'batch_size': 80, 'learning_rate': 1.7299704201520872e-05, 'omega_0': 48, 'shared_depth': 7, 'shared_width': 256, 'unique_depth': 1, 'unique_width': 64}
+2024-10-24 00:15:51,833 INFO    MainThread:883330 [wandb_init.py:init():783] updated telemetry
+2024-10-24 00:15:51,872 INFO    MainThread:883330 [wandb_init.py:init():816] communicating run to backend with 90.0 second timeout
+2024-10-24 00:15:52,512 INFO    MainThread:883330 [wandb_init.py:init():867] starting run threads in backend
+2024-10-24 00:15:52,856 INFO    MainThread:883330 [wandb_run.py:_console_start():2463] atexit reg
+2024-10-24 00:15:52,856 INFO    MainThread:883330 [wandb_run.py:_redirect():2311] redirect: wrap_raw
+2024-10-24 00:15:52,856 INFO    MainThread:883330 [wandb_run.py:_redirect():2376] Wrapping output streams.
+2024-10-24 00:15:52,857 INFO    MainThread:883330 [wandb_run.py:_redirect():2401] Redirects installed.
+2024-10-24 00:15:52,859 INFO    MainThread:883330 [wandb_init.py:init():911] run started, returning control to user process
+2024-10-24 00:15:53,778 INFO    MainThread:883330 [wandb_run.py:_finish():2158] finishing run pimdewildt11-eindhoven-university-of-technology/SPO_pretrainer_SnelliusSweep/bipviapf
+2024-10-24 00:15:53,778 INFO    MainThread:883330 [wandb_run.py:_atexit_cleanup():2426] got exitcode: 1
+2024-10-24 00:15:53,778 INFO    MainThread:883330 [wandb_run.py:_restore():2408] restore
+2024-10-24 00:15:53,778 INFO    MainThread:883330 [wandb_run.py:_restore():2414] restore done
+2024-10-24 00:15:58,476 INFO    MainThread:883330 [wandb_run.py:_footer_history_summary_info():3975] rendering history
+2024-10-24 00:15:58,476 INFO    MainThread:883330 [wandb_run.py:_footer_history_summary_info():4007] rendering summary
+2024-10-24 00:15:58,480 INFO    MainThread:883330 [wandb_run.py:_footer_sync_info():3934] logging synced files

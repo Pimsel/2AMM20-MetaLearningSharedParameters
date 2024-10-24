@@ -344,3 +344,113 @@ wandb.errors.errors.CommError: name required for project query (Error 400: Bad R
 2024-10-23 23:45:32 INFO Running runs: ['wzqbhxik']
 2024-10-23 23:46:14 ERROR 404 response executing GraphQL.
 2024-10-23 23:46:14 ERROR {"errors":[{"message":"could not find agent ee5rsu9v during agentHeartbeat","path":["agentHeartbeat"]}],"data":{"agentHeartbeat":null}}
+2024-10-23 23:55:10 INFO Running runs: []
+2024-10-23 23:55:10 INFO Agent received command: run
+2024-10-23 23:55:10 INFO Agent starting run with config:
+	batch_size: 15
+	learning_rate: 0.00032198084145240935
+	omega_0: 57
+	shared_depth: 8
+	shared_width: 320
+	unique_depth: 2
+	unique_width: 128
+2024-10-23 23:55:10 INFO About to run command: /usr/bin/env python pretrain.py --batch_size=15 --learning_rate=0.00032198084145240935 --omega_0=57 --shared_depth=8 --shared_width=320 --unique_depth=2 --unique_width=128
+2024-10-23 23:55:16 INFO Running runs: ['yljr3jy9']
+2024-10-24 00:15:10 INFO Running runs: []
+2024-10-24 00:15:10 INFO Agent received command: run
+2024-10-24 00:15:10 INFO Agent starting run with config:
+	batch_size: 65
+	learning_rate: 0.0003848964575598498
+	omega_0: 18
+	shared_depth: 7
+	shared_width: 384
+	unique_depth: 3
+	unique_width: 96
+2024-10-24 00:15:10 INFO About to run command: /usr/bin/env python pretrain.py --batch_size=65 --learning_rate=0.0003848964575598498 --omega_0=18 --shared_depth=7 --shared_width=384 --unique_depth=3 --unique_width=96
+2024-10-24 00:15:15 INFO Running runs: ['owb6c4ri']
+2024-10-24 00:15:31 INFO Cleaning up finished run: owb6c4ri
+2024-10-24 00:15:31 INFO Agent received command: run
+2024-10-24 00:15:31 INFO Agent starting run with config:
+	batch_size: 35
+	learning_rate: 0.0001571029981031835
+	omega_0: 21
+	shared_depth: 9
+	shared_width: 256
+	unique_depth: 1
+	unique_width: 128
+2024-10-24 00:15:31 INFO About to run command: /usr/bin/env python pretrain.py --batch_size=35 --learning_rate=0.0001571029981031835 --omega_0=21 --shared_depth=9 --shared_width=256 --unique_depth=1 --unique_width=128
+2024-10-24 00:15:36 INFO Running runs: ['ozpy346v']
+2024-10-24 00:15:46 INFO Cleaning up finished run: ozpy346v
+2024-10-24 00:15:47 INFO Agent received command: run
+2024-10-24 00:15:47 INFO Agent starting run with config:
+	batch_size: 80
+	learning_rate: 1.7299704201520872e-05
+	omega_0: 48
+	shared_depth: 7
+	shared_width: 256
+	unique_depth: 1
+	unique_width: 64
+2024-10-24 00:15:47 INFO About to run command: /usr/bin/env python pretrain.py --batch_size=80 --learning_rate=1.7299704201520872e-05 --omega_0=48 --shared_depth=7 --shared_width=256 --unique_depth=1 --unique_width=64
+2024-10-24 00:15:52 INFO Running runs: ['bipviapf']
+2024-10-24 00:16:02 ERROR Detected 3 failed runs in the first 60 seconds, shutting down.
+2024-10-24 00:16:02 INFO To disable this check set WANDB_AGENT_DISABLE_FLAPPING=true
+2024-10-24 00:20:39 INFO Running runs: []
+2024-10-24 00:20:39 INFO Agent received command: run
+2024-10-24 00:20:39 INFO Agent starting run with config:
+	batch_size: 5
+	learning_rate: 0.0005799567653827098
+	omega_0: 60
+	shared_depth: 7
+	shared_width: 320
+	unique_depth: 1
+	unique_width: 192
+2024-10-24 00:20:39 INFO About to run command: /usr/bin/env python pretrain.py --batch_size=5 --learning_rate=0.0005799567653827098 --omega_0=60 --shared_depth=7 --shared_width=320 --unique_depth=1 --unique_width=192
+2024-10-24 00:20:44 INFO Running runs: ['43buwenl']
+2024-10-24 03:56:18 INFO Cleaning up finished run: 43buwenl
+2024-10-24 03:56:21 INFO Agent received command: run
+2024-10-24 03:56:21 INFO Agent starting run with config:
+	batch_size: 5
+	learning_rate: 0.00023027798566862455
+	omega_0: 42
+	shared_depth: 6
+	shared_width: 128
+	unique_depth: 2
+	unique_width: 96
+2024-10-24 03:56:21 INFO About to run command: /usr/bin/env python pretrain.py --batch_size=5 --learning_rate=0.00023027798566862455 --omega_0=42 --shared_depth=6 --shared_width=128 --unique_depth=2 --unique_width=96
+2024-10-24 03:56:26 INFO Running runs: ['tru1bqc8']
+2024-10-24 05:04:22 INFO Cleaning up finished run: tru1bqc8
+2024-10-24 05:04:23 INFO Agent received command: run
+2024-10-24 05:04:23 INFO Agent starting run with config:
+	batch_size: 10
+	learning_rate: 0.0008639695658069262
+	omega_0: 42
+	shared_depth: 6
+	shared_width: 384
+	unique_depth: 2
+	unique_width: 128
+2024-10-24 05:04:23 INFO About to run command: /usr/bin/env python pretrain.py --batch_size=10 --learning_rate=0.0008639695658069262 --omega_0=42 --shared_depth=6 --shared_width=384 --unique_depth=2 --unique_width=128
+2024-10-24 05:04:28 INFO Running runs: ['l8g989md']
+2024-10-24 09:14:09 INFO Cleaning up finished run: l8g989md
+2024-10-24 09:14:09 INFO Agent received command: run
+2024-10-24 09:14:09 INFO Agent starting run with config:
+	batch_size: 0
+	learning_rate: 0.0006980119531288905
+	omega_0: 24
+	shared_depth: 7
+	shared_width: 256
+	unique_depth: 1
+	unique_width: 128
+2024-10-24 09:14:09 INFO About to run command: /usr/bin/env python pretrain.py --batch_size=0 --learning_rate=0.0006980119531288905 --omega_0=24 --shared_depth=7 --shared_width=256 --unique_depth=1 --unique_width=128
+2024-10-24 09:14:14 INFO Running runs: ['a5430mkx']
+2024-10-24 09:14:24 INFO Cleaning up finished run: a5430mkx
+2024-10-24 09:14:25 INFO Agent received command: run
+2024-10-24 09:14:25 INFO Agent starting run with config:
+	batch_size: 10
+	learning_rate: 0.0004229912036510938
+	omega_0: 24
+	shared_depth: 7
+	shared_width: 128
+	unique_depth: 2
+	unique_width: 160
+2024-10-24 09:14:25 INFO About to run command: /usr/bin/env python pretrain.py --batch_size=10 --learning_rate=0.0004229912036510938 --omega_0=24 --shared_depth=7 --shared_width=128 --unique_depth=2 --unique_width=160
+2024-10-24 09:14:30 INFO Running runs: ['slp991h9']

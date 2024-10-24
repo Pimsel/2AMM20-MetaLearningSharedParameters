@@ -5,7 +5,7 @@ program: pretrain.py
 method: random
 
 # Project
-project: SPO_pretrainer_SnelliusSweep
+project: SPO_pretrainer_SnelliusSweep2
 entity: pimdewildt11-eindhoven-university-of-technology
 
 # Metric to optimize
@@ -15,31 +15,6 @@ metric:
 
 # Parameter spaces to search
 parameters:
-  learning_rate:
-    distribution: uniform
-    min: 1e-6
-    max: 1e-3
-  batch_size: 
-    distribution: q_uniform
-    min: 1
-    max: 100
-    q: 5
-  shared_width:
-    distribution: categorical
-    values: [128, 192, 256, 320, 384]
-  shared_depth:
-    distribution: q_uniform
-    min: 5
-    max: 9
-    q: 1
-  unique_width:
-    distribution: categorical
-    values: [64, 96, 128, 160, 192]
-  unique_depth:
-    distribution: categorical
-    values: [1, 2, 3]
   omega_0:
-    distribution: q_uniform
-    min: 12
-    max: 60
-    q: 3
+    distribution: categorical
+    values: [30, 45, 60]

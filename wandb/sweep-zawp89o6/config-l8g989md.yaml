@@ -1,0 +1,16 @@
+wandb_version: 1
+
+batch_size:
+  value: 10
+learning_rate:
+  value: 0.0008639695658069262
+omega_0:
+  value: 42
+shared_depth:
+  value: 6
+shared_width:
+  value: 384
+unique_depth:
+  value: 2
+unique_width:
+  value: 128
