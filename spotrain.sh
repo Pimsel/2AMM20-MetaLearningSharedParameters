@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH --time=5:00:00
+#SBATCH --time=17:00:00
 #SBATCH -p gpu
 #SBATCH -N 1
 #SBATCH --tasks-per-node 4

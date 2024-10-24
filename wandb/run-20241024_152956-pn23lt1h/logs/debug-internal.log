@@ -1,0 +1,8 @@
+{"time":"2024-10-24T15:29:57.037048183+02:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-10-24T15:29:57.037105419+02:00","level":"INFO","msg":"created symlink","path":"/gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_152956-pn23lt1h/logs/debug-core.log"}
+{"time":"2024-10-24T15:29:57.14861622+02:00","level":"INFO","msg":"created new stream","id":"pn23lt1h"}
+{"time":"2024-10-24T15:29:57.148661479+02:00","level":"INFO","msg":"stream: started","id":"pn23lt1h"}
+{"time":"2024-10-24T15:29:57.148702932+02:00","level":"INFO","msg":"sender: started","stream_id":"pn23lt1h"}
+{"time":"2024-10-24T15:29:57.148702732+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"pn23lt1h"}}
+{"time":"2024-10-24T15:29:57.148738887+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"pn23lt1h"}}
+{"time":"2024-10-24T15:29:57.394270599+02:00","level":"INFO","msg":"Starting system monitor"}
