@@ -50,7 +50,7 @@ def prepare_image_for_siren(image_tensor):
     '''
 
     # Get image dimensions
-    C, H, W = image_tensor.shape
+    B, C, H, W = image_tensor.shape
     
     # Create a mesh grid of pixel coordinates
     y_coords, x_coords = torch.meshgrid(torch.linspace(0, H-1, H), torch.linspace(0, W-1, W))

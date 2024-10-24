@@ -1,0 +1,47 @@
+{
+    "os": "Windows-10-10.0.22631-SP0",
+    "python": "3.11.10",
+    "heartbeatAt": "2024-10-24T11:29:42.712144",
+    "startedAt": "2024-10-24T11:29:42.258713",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "C:\\Users\\pimde\\OneDrive\\Documents\\GitHub\\2AMM20-MetaLearningSharedParameters\\spotrain.py",
+    "codePathLocal": "spotrain.py",
+    "codePath": "spotrain.py",
+    "host": "Pimsel-PC",
+    "username": "pimde",
+    "executable": "C:\\Users\\pimde\\anaconda3\\envs\\2AMM20\\python.exe",
+    "cpu_count": 6,
+    "cpu_count_logical": 12,
+    "cpu_freq": {
+        "current": 3501.0,
+        "min": 0.0,
+        "max": 3501.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3501.0,
+            "min": 0.0,
+            "max": 3501.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 930.7607574462891,
+            "used": 856.1945304870605
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 3080",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3080",
+            "memory_total": 10737418240
+        }
+    ],
+    "memory": {
+        "total": 31.883975982666016
+    }
+}
