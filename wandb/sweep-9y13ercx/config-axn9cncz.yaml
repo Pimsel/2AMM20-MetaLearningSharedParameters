@@ -1,0 +1,8 @@
+wandb_version: 1
+
+K:
+  value: 30
+inner_learning_rate:
+  value: 5.0e-05
+meta_learning_rate:
+  value: 0.001

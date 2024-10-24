@@ -21,5 +21,6 @@ wandblogin="$(<../wandb.login)"
 wandb login "$wandblogin"
 
 
-wandbsweep="$(<../wandb.sweep)"
-wandb agent "$wandbsweep"
+python spotrain.py
+#wandbsweep="$(<../wandb.sweep)"
+#wandb agent "$wandbsweep"

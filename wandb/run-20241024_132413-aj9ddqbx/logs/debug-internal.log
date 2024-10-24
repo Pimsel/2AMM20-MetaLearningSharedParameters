@@ -1,0 +1,17 @@
+{"time":"2024-10-24T13:24:13.809382344+02:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-10-24T13:24:13.809445365+02:00","level":"INFO","msg":"created symlink","path":"/gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_132413-aj9ddqbx/logs/debug-core.log"}
+{"time":"2024-10-24T13:24:13.918678346+02:00","level":"INFO","msg":"created new stream","id":"aj9ddqbx"}
+{"time":"2024-10-24T13:24:13.918716674+02:00","level":"INFO","msg":"stream: started","id":"aj9ddqbx"}
+{"time":"2024-10-24T13:24:13.9187458+02:00","level":"INFO","msg":"sender: started","stream_id":"aj9ddqbx"}
+{"time":"2024-10-24T13:24:13.918735862+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"aj9ddqbx"}}
+{"time":"2024-10-24T13:24:13.918746045+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"aj9ddqbx"}}
+{"time":"2024-10-24T13:24:14.136588599+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-24T13:24:16.841733933+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-24T13:24:16.842214711+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-24T13:24:17.668351847+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-10-24T13:24:17.835301562+02:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2024-10-24T13:24:18.843312339+02:00","level":"INFO","msg":"stream: closing","id":"aj9ddqbx"}
+{"time":"2024-10-24T13:24:18.843325222+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"aj9ddqbx"}}
+{"time":"2024-10-24T13:24:18.843340111+02:00","level":"INFO","msg":"sender: closed","stream_id":"aj9ddqbx"}
+{"time":"2024-10-24T13:24:18.843337239+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"aj9ddqbx"}}
+{"time":"2024-10-24T13:24:18.843509809+02:00","level":"INFO","msg":"stream: closed","id":"aj9ddqbx"}

@@ -38,8 +38,11 @@ def spotrain(config):
                 batch_total_loss = 0
                 for image in image_batch:
                     coords, targets = prepare_image_for_siren(image)
+                    coords = coords.to(device)
+                    targets = targets.to(device)
 
                     # Create a copy of the unique parameters for the inner loop
+                    #unique_params = [param.to(device).requires_grad_(True) for param in original_unique_params]
                     unique_params = [param.to(device).requires_grad_(True) for param in original_unique_params]
 
                     # Inner loop
@@ -74,7 +77,7 @@ def spotrain(config):
             best_loss, wait, stop_training = check_patience(best_loss, avg_outer_loss.item(), wait, config.patience)
 
             if wait == 0:
-                torch.save(model.state_dict(), 'saved_models/spo_model_params.pth')
+                torch.save(model, 'saved_models/spo_model.pth')
             if stop_training:
                 print(f'Training stopped early at epoch {epoch+1}.')
                 break
@@ -85,11 +88,11 @@ def spotrain(config):
 # Initialize default hyperparameters and parser functionality
 default_config = SimpleNamespace(
     epochs=10000,
-    patience=20,
+    patience=50,
     batch_size=5,
     inner_learning_rate=5e-6,
     meta_learning_rate=5e-4,
-    K=10
+    K=20
 )
 
 def parse_args():

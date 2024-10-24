@@ -1,0 +1,17 @@
+{"time":"2024-10-24T10:22:26.951195682+02:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-10-24T10:22:26.951288642+02:00","level":"INFO","msg":"created symlink","path":"/gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_102226-yxbrtcxd/logs/debug-core.log"}
+{"time":"2024-10-24T10:22:27.065738971+02:00","level":"INFO","msg":"created new stream","id":"yxbrtcxd"}
+{"time":"2024-10-24T10:22:27.065798598+02:00","level":"INFO","msg":"stream: started","id":"yxbrtcxd"}
+{"time":"2024-10-24T10:22:27.065846995+02:00","level":"INFO","msg":"sender: started","stream_id":"yxbrtcxd"}
+{"time":"2024-10-24T10:22:27.06584566+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"yxbrtcxd"}}
+{"time":"2024-10-24T10:22:27.065846737+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"yxbrtcxd"}}
+{"time":"2024-10-24T10:22:27.370388976+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-24T13:03:59.533214757+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-24T13:03:59.535872249+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-24T13:04:00.53218755+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.717958465}],"total_operations":1}}
+{"time":"2024-10-24T13:04:02.979008374+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-10-24T13:04:04.158456023+02:00","level":"INFO","msg":"stream: closing","id":"yxbrtcxd"}
+{"time":"2024-10-24T13:04:04.158480903+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"yxbrtcxd"}}
+{"time":"2024-10-24T13:04:04.158500482+02:00","level":"INFO","msg":"sender: closed","stream_id":"yxbrtcxd"}
+{"time":"2024-10-24T13:04:04.158499124+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"yxbrtcxd"}}
+{"time":"2024-10-24T13:04:04.158720669+02:00","level":"INFO","msg":"stream: closed","id":"yxbrtcxd"}

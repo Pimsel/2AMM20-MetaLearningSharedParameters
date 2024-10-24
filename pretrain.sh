@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH --time=9:00:00
+#SBATCH --time=5:00:00
 #SBATCH -p gpu
 #SBATCH -N 1
 #SBATCH --tasks-per-node 4
@@ -21,5 +21,4 @@ wandblogin="$(<../wandb.login)"
 wandb login "$wandblogin"
 
 
-wandbsweep="$(<../wandb.sweep)"
-wandb agent "$wandbsweep"
+python pretrain.py

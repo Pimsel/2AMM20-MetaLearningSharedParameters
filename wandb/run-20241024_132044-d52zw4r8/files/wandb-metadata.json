@@ -1,0 +1,90 @@
+{
+  "os":  "Linux-5.14.0-427.31.1.el9_4.x86_64-x86_64-with-glibc2.34",
+  "python":  "3.11.3",
+  "startedAt":  "2024-10-24T11:20:44.396639Z",
+  "program":  "/gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/spotrain.py",
+  "codePath":  "spotrain.py",
+  "git":  {
+    "remote":  "https://github.com/Pimsel/2AMM20-MetaLearningSharedParameters.git",
+    "commit":  "9d0558397feb15c389392d6888b74598eac5fe11"
+  },
+  "email":  "pimdewildt11@gmail.com",
+  "root":  "/gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters",
+  "host":  "gcn66.local.snellius.surf.nl",
+  "username":  "scur1981",
+  "executable":  "/gpfs/home2/scur1981/2AMM20_NFgroup1/bin/python",
+  "codePathLocal":  "spotrain.py",
+  "cpu_count":  72,
+  "cpu_count_logical":  72,
+  "gpu":  "NVIDIA A100-SXM4-40GB",
+  "gpu_count":  1,
+  "disk":  {
+    "/":  {
+      "total":  "270185943040",
+      "used":  "3595481088"
+    }
+  },
+  "memory":  {
+    "total":  "540635865088"
+  },
+  "cpu":  {
+    "count":  72,
+    "countLogical":  72
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "NVIDIA A100-SXM4-40GB",
+      "memoryTotal":  "42949672960",
+      "cudaCores":  6912,
+      "architecture":  "Ampere"
+    }
+  ],
+  "slurm":  {
+    "cluster_name":  "snellius",
+    "conf":  "/var/spool/slurm/slurmd/conf-cache/slurm.conf",
+    "cpus_on_node":  "18",
+    "eclibr":  "0",
+    "ecplug":  "1",
+    "erlast":  "sbatch",
+    "ersbac":  "1",
+    "export_env":  "ALL",
+    "get_user_env":  "1",
+    "gpus":  "1",
+    "gpus_on_node":  "1",
+    "gtids":  "0",
+    "job_account":  "gputue001",
+    "job_cpus_per_node":  "18",
+    "job_end_time":  "1729786825",
+    "job_gid":  "63775",
+    "job_gpus":  "2",
+    "job_id":  "8258926",
+    "job_name":  "spotrain.sh",
+    "job_nodelist":  "gcn66",
+    "job_num_nodes":  "1",
+    "job_partition":  "gpu",
+    "job_qos":  "normal",
+    "job_start_time":  "1729768824",
+    "job_uid":  "64241",
+    "job_user":  "scur1981",
+    "jobid":  "8258926",
+    "localid":  "0",
+    "mpi_type":  "pmix",
+    "nnodes":  "1",
+    "nodeid":  "0",
+    "nodelist":  "gcn66",
+    "nprocs":  "4",
+    "ntasks":  "4",
+    "ntasks_per_node":  "4",
+    "prio_process":  "0",
+    "procid":  "0",
+    "script_context":  "prolog_task",
+    "step_gres":  "gres/cpu:0",
+    "submit_dir":  "/gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters",
+    "submit_host":  "int4",
+    "task_pid":  "155561",
+    "tasks_per_node":  "4",
+    "topology_addr":  "root.ibsw26.gcn66",
+    "topology_addr_pattern":  "switch.switch.node"
+  },
+  "cudaVersion":  "12.5"
+}

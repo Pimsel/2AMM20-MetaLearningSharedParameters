@@ -1,0 +1,7 @@
+/sw/arch/RHEL8/EB_production/2023/software/PyTorch/2.1.2-foss-2023a-CUDA-12.1.1/lib/python3.11/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at /tmp/jenkins/build/PyTorch/2.1.2/foss-2023a-CUDA-12.1.1/pytorch-v2.1.2/aten/src/ATen/native/TensorShape.cpp:3526.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Traceback (most recent call last):
+  File "/gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/spotrain.py", line 51, in spotrain
+    inner_optimizer = optim.Adam(unique_params.values(), lr=config.inner_learning_rate)
+                                 ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'values'

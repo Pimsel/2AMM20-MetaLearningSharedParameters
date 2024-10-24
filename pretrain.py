@@ -65,7 +65,7 @@ def pretrain(config):
             best_loss, wait, stop_training = check_patience(best_loss, avg_loss.item(), wait, config.patience)
 
             if wait == 0:
-                torch.save(model.state_dict(), 'saved_models/model_params.pth')
+                torch.save(model, 'saved_models/pretrained_model.pth')
             if stop_training:
                 print(f'Training stopped early at epoch {epoch+1}.')
                 break

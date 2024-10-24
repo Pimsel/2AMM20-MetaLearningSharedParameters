@@ -454,3 +454,19 @@ wandb.errors.errors.CommError: name required for project query (Error 400: Bad R
 	unique_width: 160
 2024-10-24 09:14:25 INFO About to run command: /usr/bin/env python pretrain.py --batch_size=10 --learning_rate=0.0004229912036510938 --omega_0=24 --shared_depth=7 --shared_width=128 --unique_depth=2 --unique_width=160
 2024-10-24 09:14:30 INFO Running runs: ['slp991h9']
+2024-10-24 10:19:03 INFO Running runs: []
+2024-10-24 10:19:03 INFO Agent received command: run
+2024-10-24 10:19:03 INFO Agent starting run with config:
+	K: 30
+	inner_learning_rate: 5e-05
+	meta_learning_rate: 0.001
+2024-10-24 10:19:03 INFO About to run command: /usr/bin/env python spotrain.py --K=30 --inner_learning_rate=5e-05 --meta_learning_rate=0.001
+2024-10-24 10:19:08 INFO Running runs: ['axn9cncz']
+2024-10-24 10:19:18 INFO Cleaning up finished run: axn9cncz
+2024-10-24 10:19:19 INFO Agent received command: run
+2024-10-24 10:19:19 INFO Agent starting run with config:
+	K: 20
+	inner_learning_rate: 0.0001
+	meta_learning_rate: 0.0001
+2024-10-24 10:19:19 INFO About to run command: /usr/bin/env python spotrain.py --K=20 --inner_learning_rate=0.0001 --meta_learning_rate=0.0001
+2024-10-24 10:19:24 INFO Running runs: ['05awfx72']

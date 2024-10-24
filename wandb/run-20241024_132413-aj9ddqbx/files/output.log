@@ -1,0 +1,10 @@
+/sw/arch/RHEL8/EB_production/2023/software/PyTorch/2.1.2-foss-2023a-CUDA-12.1.1/lib/python3.11/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at /tmp/jenkins/build/PyTorch/2.1.2/foss-2023a-CUDA-12.1.1/pytorch-v2.1.2/aten/src/ATen/native/TensorShape.cpp:3526.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Traceback (most recent call last):
+  File "/gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/spotrain.py", line 71, in spotrain
+    avg_outer_loss.backward()
+  File "/sw/arch/RHEL8/EB_production/2023/software/PyTorch/2.1.2-foss-2023a-CUDA-12.1.1/lib/python3.11/site-packages/torch/_tensor.py", line 492, in backward
+    torch.autograd.backward(
+  File "/sw/arch/RHEL8/EB_production/2023/software/PyTorch/2.1.2-foss-2023a-CUDA-12.1.1/lib/python3.11/site-packages/torch/autograd/__init__.py", line 251, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+RuntimeError: one of the variables needed for gradient computation has been modified by an inplace operation: [torch.cuda.FloatTensor [160, 3]], which is output 0 of AsStridedBackward0, is at version 101; expected version 81 instead. Hint: enable anomaly detection to find the operation that failed to compute its gradient, with torch.autograd.set_detect_anomaly(True).

@@ -303,3 +303,178 @@
 2024-10-24 10:15:59,574 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: stop_status
 2024-10-24 10:15:59,575 DEBUG   SenderThread:2217602 [sender.py:send_request():416] send_request: stop_status
 2024-10-24 10:16:01,358 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:16:03,361 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:16:04,477 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: status_report
+2024-10-24 10:16:04,575 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-24 10:16:05,361 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:16:07,362 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:16:09,362 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:16:09,483 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: status_report
+2024-10-24 10:16:11,362 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:16:13,365 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:16:14,264 DEBUG   SenderThread:2217602 [sender.py:send():389] send: stats
+2024-10-24 10:16:14,488 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: status_report
+2024-10-24 10:16:14,575 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: stop_status
+2024-10-24 10:16:14,575 DEBUG   SenderThread:2217602 [sender.py:send_request():416] send_request: stop_status
+2024-10-24 10:16:14,578 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-24 10:16:15,365 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:16:17,366 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:16:19,366 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:16:19,494 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: status_report
+2024-10-24 10:16:22,367 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:16:23,370 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:16:24,500 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: status_report
+2024-10-24 10:16:24,576 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-24 10:16:25,371 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:16:27,371 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:16:29,372 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:16:29,505 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: status_report
+2024-10-24 10:16:29,575 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: stop_status
+2024-10-24 10:16:29,575 DEBUG   SenderThread:2217602 [sender.py:send_request():416] send_request: stop_status
+2024-10-24 10:16:31,372 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:16:33,373 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:16:34,512 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: status_report
+2024-10-24 10:16:34,576 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-24 10:16:35,373 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:16:37,374 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:16:39,374 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:16:39,519 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: status_report
+2024-10-24 10:16:40,039 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-24 10:16:40,040 DEBUG   SenderThread:2217602 [sender.py:send():389] send: history
+2024-10-24 10:16:40,040 DEBUG   SenderThread:2217602 [sender.py:send_request():416] send_request: summary_record
+2024-10-24 10:16:40,043 INFO    SenderThread:2217602 [sender.py:_save_file():1423] saving file wandb-summary.json with policy end
+2024-10-24 10:16:40,374 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/wandb-summary.json
+2024-10-24 10:16:41,374 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:16:43,377 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:16:44,265 DEBUG   SenderThread:2217602 [sender.py:send():389] send: stats
+2024-10-24 10:16:44,533 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: status_report
+2024-10-24 10:16:44,575 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: stop_status
+2024-10-24 10:16:44,575 DEBUG   SenderThread:2217602 [sender.py:send_request():416] send_request: stop_status
+2024-10-24 10:16:44,578 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-24 10:16:45,378 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:16:47,378 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:16:49,379 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:16:49,538 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: status_report
+2024-10-24 10:16:51,379 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:16:53,379 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:16:54,544 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: status_report
+2024-10-24 10:16:54,576 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-24 10:16:55,380 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:16:57,380 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:16:59,381 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:16:59,550 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: status_report
+2024-10-24 10:16:59,575 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: stop_status
+2024-10-24 10:16:59,575 DEBUG   SenderThread:2217602 [sender.py:send_request():416] send_request: stop_status
+2024-10-24 10:17:01,381 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:17:03,382 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:17:04,558 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: status_report
+2024-10-24 10:17:04,576 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-24 10:17:05,382 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:17:07,383 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:17:09,383 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:17:09,565 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: status_report
+2024-10-24 10:17:11,384 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:17:13,386 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:17:14,266 DEBUG   SenderThread:2217602 [sender.py:send():389] send: stats
+2024-10-24 10:17:14,570 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: status_report
+2024-10-24 10:17:14,575 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: stop_status
+2024-10-24 10:17:14,575 DEBUG   SenderThread:2217602 [sender.py:send_request():416] send_request: stop_status
+2024-10-24 10:17:14,578 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-24 10:17:15,386 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:17:17,386 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:17:19,387 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:17:19,575 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: status_report
+2024-10-24 10:17:21,387 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:17:23,388 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:17:24,576 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-24 10:17:24,579 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: status_report
+2024-10-24 10:17:25,388 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:17:27,389 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:17:29,389 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:17:29,575 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: stop_status
+2024-10-24 10:17:29,575 DEBUG   SenderThread:2217602 [sender.py:send_request():416] send_request: stop_status
+2024-10-24 10:17:29,802 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: status_report
+2024-10-24 10:17:31,390 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:17:33,390 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:17:34,576 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-24 10:17:34,828 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: status_report
+2024-10-24 10:17:35,390 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:17:37,391 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:17:39,000 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-24 10:17:39,001 DEBUG   SenderThread:2217602 [sender.py:send():389] send: history
+2024-10-24 10:17:39,001 DEBUG   SenderThread:2217602 [sender.py:send_request():416] send_request: summary_record
+2024-10-24 10:17:39,001 INFO    SenderThread:2217602 [sender.py:_save_file():1423] saving file wandb-summary.json with policy end
+2024-10-24 10:17:39,392 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/wandb-summary.json
+2024-10-24 10:17:39,392 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:17:39,843 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: status_report
+2024-10-24 10:17:41,392 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:17:43,394 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:17:44,267 DEBUG   SenderThread:2217602 [sender.py:send():389] send: stats
+2024-10-24 10:17:44,575 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: stop_status
+2024-10-24 10:17:44,575 DEBUG   SenderThread:2217602 [sender.py:send_request():416] send_request: stop_status
+2024-10-24 10:17:44,578 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-24 10:17:44,848 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: status_report
+2024-10-24 10:17:45,394 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:17:47,395 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:17:49,395 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:17:49,859 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: status_report
+2024-10-24 10:17:51,396 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:17:53,396 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:17:54,576 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-24 10:17:54,867 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: status_report
+2024-10-24 10:17:55,397 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:17:57,397 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:17:59,398 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:17:59,575 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: stop_status
+2024-10-24 10:17:59,575 DEBUG   SenderThread:2217602 [sender.py:send_request():416] send_request: stop_status
+2024-10-24 10:17:59,873 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: status_report
+2024-10-24 10:18:01,399 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:18:03,399 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:18:04,576 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-24 10:18:04,879 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: status_report
+2024-10-24 10:18:05,400 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:18:07,400 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:18:09,401 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:18:09,886 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: status_report
+2024-10-24 10:18:11,401 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:18:13,402 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:18:14,267 DEBUG   SenderThread:2217602 [sender.py:send():389] send: stats
+2024-10-24 10:18:14,575 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: stop_status
+2024-10-24 10:18:14,576 DEBUG   SenderThread:2217602 [sender.py:send_request():416] send_request: stop_status
+2024-10-24 10:18:14,578 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-24 10:18:14,892 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: status_report
+2024-10-24 10:18:15,403 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:18:17,403 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:18:19,404 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:18:19,898 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: status_report
+2024-10-24 10:18:21,404 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:18:23,405 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:18:24,577 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-24 10:18:24,903 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: status_report
+2024-10-24 10:18:25,405 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:18:27,406 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:18:29,406 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:18:29,575 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: stop_status
+2024-10-24 10:18:29,575 DEBUG   SenderThread:2217602 [sender.py:send_request():416] send_request: stop_status
+2024-10-24 10:18:29,910 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: status_report
+2024-10-24 10:18:31,406 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:18:33,407 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:18:34,577 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-24 10:18:34,915 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: status_report
+2024-10-24 10:18:35,407 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:18:37,408 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:18:37,967 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-24 10:18:37,968 DEBUG   SenderThread:2217602 [sender.py:send():389] send: history
+2024-10-24 10:18:37,968 DEBUG   SenderThread:2217602 [sender.py:send_request():416] send_request: summary_record
+2024-10-24 10:18:37,968 INFO    SenderThread:2217602 [sender.py:_save_file():1423] saving file wandb-summary.json with policy end
+2024-10-24 10:18:38,408 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/wandb-summary.json
+2024-10-24 10:18:39,408 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:18:39,928 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: status_report
+2024-10-24 10:18:41,409 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:18:43,411 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
+2024-10-24 10:18:44,268 DEBUG   SenderThread:2217602 [sender.py:send():389] send: stats
+2024-10-24 10:18:44,575 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: stop_status
+2024-10-24 10:18:44,576 DEBUG   SenderThread:2217602 [sender.py:send_request():416] send_request: stop_status
+2024-10-24 10:18:44,579 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-24 10:18:44,934 DEBUG   HandlerThread:2217602 [handler.py:handle_request():158] handle_request: status_report
+2024-10-24 10:18:45,411 INFO    Thread-12 :2217602 [dir_watcher.py:_on_file_modified():288] file/dir modified: /gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_101143-16v0e430/files/output.log
