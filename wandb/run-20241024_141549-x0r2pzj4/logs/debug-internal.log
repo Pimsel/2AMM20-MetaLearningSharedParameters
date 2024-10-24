@@ -1,0 +1,17 @@
+{"time":"2024-10-24T14:15:49.609999488+02:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-10-24T14:15:49.610053835+02:00","level":"INFO","msg":"created symlink","path":"/gpfs/home2/scur1981/2AMM20-MetaLearningSharedParameters/wandb/run-20241024_141549-x0r2pzj4/logs/debug-core.log"}
+{"time":"2024-10-24T14:15:49.721436329+02:00","level":"INFO","msg":"created new stream","id":"x0r2pzj4"}
+{"time":"2024-10-24T14:15:49.721481241+02:00","level":"INFO","msg":"stream: started","id":"x0r2pzj4"}
+{"time":"2024-10-24T14:15:49.721532344+02:00","level":"INFO","msg":"sender: started","stream_id":"x0r2pzj4"}
+{"time":"2024-10-24T14:15:49.721518139+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"x0r2pzj4"}}
+{"time":"2024-10-24T14:15:49.721536118+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"x0r2pzj4"}}
+{"time":"2024-10-24T14:15:50.254493367+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-24T14:15:50.525855935+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-24T14:15:50.526154727+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-24T14:15:51.492219637+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.476789495}],"total_operations":1}}
+{"time":"2024-10-24T14:15:53.236694873+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-10-24T14:15:54.423449764+02:00","level":"INFO","msg":"stream: closing","id":"x0r2pzj4"}
+{"time":"2024-10-24T14:15:54.423466797+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"x0r2pzj4"}}
+{"time":"2024-10-24T14:15:54.423480716+02:00","level":"INFO","msg":"sender: closed","stream_id":"x0r2pzj4"}
+{"time":"2024-10-24T14:15:54.423478589+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"x0r2pzj4"}}
+{"time":"2024-10-24T14:15:54.423597096+02:00","level":"INFO","msg":"stream: closed","id":"x0r2pzj4"}

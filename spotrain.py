@@ -11,12 +11,12 @@ from train_functions import Data, prepare_image_for_siren, check_patience
 
 
 def spotrain(config):
-    with wandb.init(project='SPO_maintrainer_Snellius2', config=config):
+    with wandb.init(project='SPO_maintrainer_Snellius', config=config):
         config = wandb.config
         
         # General initializations
-        #dataset_path = os.path.expanduser('~/traindata/celeba_smaller')
-        dataset_path = r'C:\Users\pimde\Documents\2AMM20\CelebA_small'
+        dataset_path = os.path.expanduser('~/traindata/celeba_smaller')
+        #dataset_path = r'C:\Users\pimde\Documents\2AMM20\CelebA_small'
         train_dataset = Data(dataset_path, transform=ToTensor())
         train_dataloader = DataLoader(train_dataset, batch_size=config.batch_size, shuffle=True)
 
@@ -60,9 +60,14 @@ def spotrain(config):
                             
                     # Log inner loss
                     wandb.log({f'inner_loss': inner_loss.item()})
+                    print(f'\rEpoch {str(epoch+1).ljust(4)}/{config.epochs}: image {str(i1+1).ljust(4)}/{len(train_dataloader)}', end='   ', flush=True)
                     
                 output = model(coords)
-                outer_loss = outer_loss_fn(output, targets)                    
+                outer_loss = outer_loss_fn(output, targets)
+
+                if outer_loss < best_loss:
+                    best_loss = outer_loss
+                    torch.save(model, 'saved_models/spo_model.pth')
 
                 meta_optimizer.zero_grad()
                 outer_loss.backward()
@@ -70,18 +75,9 @@ def spotrain(config):
 
 
                 wandb.log({f'outer_loss': outer_loss.item()})
-                print(f'\rEpoch {str(epoch+1).ljust(4)}/{config.epochs}.', end='   ', flush=True)
             
             avg_outer_loss = total_outer_loss / len(train_dataloader)
-            wandb.log({f'total_outer_loss': total_outer_loss.item()})
-            # Check patience
-            best_loss, wait, stop_training = check_patience(best_loss, avg_outer_loss.item(), wait, config.patience)
-
-            if wait == 0:
-                torch.save(model, 'saved_models/spo_model.pth')
-            if stop_training:
-                print(f'Training stopped early at epoch {epoch+1}.')
-                break
+            wandb.log({f'total_outer_loss': total_outer_loss})                
     
     wandb.finish()
 
@@ -89,7 +85,6 @@ def spotrain(config):
 # Initialize default hyperparameters and parser functionality
 default_config = SimpleNamespace(
     epochs=10000,
-    patience=50,
     batch_size=1,
     inner_learning_rate=5e-6,
     meta_learning_rate=5e-4,
@@ -99,7 +94,6 @@ default_config = SimpleNamespace(
 def parse_args():
     argparser = argparse.ArgumentParser(description='Process hyperparameters')
     argparser.add_argument('--epochs', type=int, default=default_config.epochs, help='maximum epochs')
-    argparser.add_argument('--patience', type=int, default=default_config.patience, help='patience')
     argparser.add_argument('--batch_size', type=int, default=default_config.batch_size, help='batch size')
     argparser.add_argument('--inner_learning_rate', type=float, default=default_config.inner_learning_rate, help='inner learning rate')
     argparser.add_argument('--meta_learning_rate', type=float, default=default_config.meta_learning_rate, help='meta learning rate')
