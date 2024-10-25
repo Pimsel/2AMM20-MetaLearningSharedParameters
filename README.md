@@ -1,5 +1,5 @@
-<h1>Paper Title Here</h1>
-<p>This repository contains all code (using PyTorch) used for the -Paper Title Here- paper.</p>
+<h1>Meta-Learning Split Implicit Neural Representations for Image Compression in Datasets</h1>
+<p>This repository contains all code (using PyTorch) used for the paper.</p>
 Authors: Shashank Prabhu, Pim de Wildt, Koen Kaandorp, Anh Nguyen, Kasra Gheytuli<br>
 <br>
 <h2>Code Usage</h2>
